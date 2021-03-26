@@ -12,13 +12,28 @@
   height: 100px;
   background-color:yellowgreen;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.botton {
+.group-name a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.button {
   width: 500px;
   height: 100px;
   background-color:aqua;
   padding: 10px;
+}
+
+.button a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
 }
 
 .user-management {
@@ -45,6 +60,12 @@
   padding: 10px;
 }
 
+.trip-history a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
 .select-trip-chart {
   width: 50vw;
   height: calc((100vh - 100px)/2);
@@ -52,15 +73,28 @@
   padding: 10px;
 }
 
+.select-trip-chart a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+
 .main-under{
   display: flex;
 }
 
-.select-trip-ranking {
+.select-belong-group {
   width: 50vw;
   height: calc((100vh - 100px)/2);
-  background-color: yellow;
+  background-color: brown;
   padding: 10px;
+}
+
+.select-belong-group a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
 }
 
 .total-trip-chart {
@@ -68,4 +102,10 @@
   height: calc((100vh - 100px)/2);
   background-color: green;
   padding: 10px;
+}
+
+.total-trip-chart a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
 }
