@@ -1,7 +1,9 @@
 .menu-bar {
-  background-color: #2F3E51;
   width:100vw;
   height: 100px;
+}
+
+.menu-bar-flex{
   display: flex;
 }
 
@@ -9,16 +11,25 @@
   width: 200px;
   height: 100px;
   background-color:yellowgreen;
+  padding: 10px;
 }
 
 .botton {
   width: 500px;
   height: 100px;
   background-color:aqua;
+  padding: 10px;
 }
 
+.user-management {
+  width: calc(100vw - 200px - 500px);
+  height: 100px;
+  background-color:white;
+  padding: 10px;
+}
+
+
 .main{
-  background-color: #FFFFFF;
   width:100vw;
   height: calc(100vh - 100px);
 }
@@ -31,12 +42,14 @@
   width: 50vw;
   height: calc((100vh - 100px)/2);
   background-color: rebeccapurple;
+  padding: 10px;
 }
 
 .select-trip-chart {
   width: 50vw;
   height: calc((100vh - 100px)/2);
   background-color: blue;
+  padding: 10px;
 }
 
 .main-under{
@@ -47,10 +60,12 @@
   width: 50vw;
   height: calc((100vh - 100px)/2);
   background-color: yellow;
+  padding: 10px;
 }
 
 .total-trip-chart {
   width: 50vw;
   height: calc((100vh - 100px)/2);
   background-color: green;
+  padding: 10px;
 }
