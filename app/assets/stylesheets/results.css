@@ -1,14 +1,56 @@
-.wrapper {
-  /* display: flex; */
-}
-
-.menu-bar{
+.menu-bar {
   background-color: #2F3E51;
   width:100vw;
   height: 100px;
+  display: flex;
 }
+
+.group-name {
+  width: 200px;
+  height: 100px;
+  background-color:yellowgreen;
+}
+
+.botton {
+  width: 500px;
+  height: 100px;
+  background-color:aqua;
+}
+
 .main{
   background-color: #FFFFFF;
   width:100vw;
   height: calc(100vh - 100px);
+}
+
+.main-top{
+  display: flex;
+}
+
+.trip-history {
+  width: 50vw;
+  height: calc((100vh - 100px)/2);
+  background-color: rebeccapurple;
+}
+
+.select-trip-chart {
+  width: 50vw;
+  height: calc((100vh - 100px)/2);
+  background-color: blue;
+}
+
+.main-under{
+  display: flex;
+}
+
+.select-trip-ranking {
+  width: 50vw;
+  height: calc((100vh - 100px)/2);
+  background-color: yellow;
+}
+
+.total-trip-chart {
+  width: 50vw;
+  height: calc((100vh - 100px)/2);
+  background-color: green;
 }
