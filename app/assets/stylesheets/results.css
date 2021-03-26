@@ -1,0 +1,14 @@
+.wrapper {
+  /* display: flex; */
+}
+
+.menu-bar{
+  background-color: #2F3E51;
+  width:100vw;
+  height: 100px;
+}
+.main{
+  background-color: #FFFFFF;
+  width:100vw;
+  height: calc(100vh - 100px);
+}
