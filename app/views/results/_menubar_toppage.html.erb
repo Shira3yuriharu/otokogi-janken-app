@@ -8,5 +8,7 @@
     <a href="#">■ジャンケン結果記録</a>
     <a href="#">■男気スポット紹介</a>
   </div>
-  <div class="user-management"></div>
+  <div class="user-management">
+    <%= link_to current_user.nickname, edit_user_path(current_user) %>
+  </div>
 </div>
