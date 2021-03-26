@@ -39,10 +39,15 @@
 .user-management {
   width: calc(100vw - 200px - 500px);
   height: 100px;
-  background-color:white;
+  background-color:orange;
   padding: 10px;
 }
 
+.user-management a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
 
 .main{
   width:100vw;
