@@ -9,7 +9,7 @@
 ### Association
 - has_many :groups
 - has_many :comments
-- has_many :user_groups
+- has_many :group_users
 
 ## groupsテーブル
 | Column          | Type     | Options                    |
@@ -18,13 +18,13 @@
 ### Association
 - has_many :users
 - has_many :travels
-- has_many :user_groups
+- has_many :group_users
 
-## user_groupsテーブル
+## group_usersテーブル
 | Column          | Type     | Options                    |
 | --------------  | ------   | ------------------------   |
-| user            | reference| null: false                |
 | group           | reference| null: false                |
+| user            | reference| null: false                |
 ### Association
 - belongs_to :user
 - belongs_to :group
