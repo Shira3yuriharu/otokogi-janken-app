@@ -7,5 +7,5 @@ class User < ApplicationRecord
   validates :nickname, presence: true
 
   has_many :group_users
-  has_many :rooms, through: :group_users
+  has_many :groups, through: :group_users
 end
