@@ -104,6 +104,12 @@
   text-decoration: none;
 }
 
+.group-name-list {
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
 .total-trip-chart {
   width: 50vw;
   height: calc((100vh - 100px)/2);
@@ -116,3 +122,4 @@
   color: #FAFAFA;
   text-decoration: none;
 }
+
