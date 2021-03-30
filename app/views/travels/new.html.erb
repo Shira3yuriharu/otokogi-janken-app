@@ -1,6 +1,8 @@
 <div class='travel-registration-form'>
+ 
   <h1>男気旅行新規作成ページ</h1>
-  <%=form_with model: @room, local: true do |f|%>
+  <%=form_with model: @travel, local: true do |f|%>
+
     <div class='travel-registration-form__field'>
       <div class='travel-registration-form__field--left'>
         <%= f.label :旅行名, class: 'travel-registration-form__label'%>
@@ -9,20 +11,40 @@
         <%= f.text_field :name, class: 'travel-registration_name travel-registration_name-form__input', placeholder: '旅行名を入力してください'%>
       </div>
     </div>
-    <div class='travel-registration-form__field'>
-    </div>
+
     <div class='travel-registration-form__field'>
       <div class='travel-registration-form__field--left'>
-        <label class='travel-registration-form__label' for='chat_room_チャットメンバー'>参加Gr</label>
+        <label class='travel-registration-form__label' for='chat_room_チャットメンバー'>旅行期間</label>
       </div>
       <div class='travel-registration-form__field--right'>
+        <input type="date" name="date" form="myform">
       </div>
     </div>
+
+    <div class='travel-registration-form__field'>
+    </div>
+    
+    <div class='travel-registration-form__field'>
+      <div class='travel-registration-form__field--left'>
+        <label class='travel-registration-form__label' for='chat_room_チャットメンバー'>グループメンバー</label>
+      </div>
+      <div class='travel-registration-form__field--right'>
+          <select name="group[user_ids][]">
+            <option value="">旅行に参加するGrを選択してください</option>
+            <% Group.all.each do |group| %>
+              <option><%= group.name %></option>
+            <% end %>
+        </select>  
+      </div>
+    </div>
+
     <div class='travel-registration-form__field'>
       <div class='travel-registration-form__field--left'></div>
       <div class='travel-registration-form__field--right'>
         <%= f.submit class: 'travel-registration-form__action-btn'%>
       </div>
     </div>
+
   <% end %>
+
 </div>
