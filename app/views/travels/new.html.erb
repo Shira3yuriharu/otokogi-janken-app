@@ -1,0 +1,28 @@
+<div class='travel-registration-form'>
+  <h1>男気旅行新規作成ページ</h1>
+  <%=form_with model: @room, local: true do |f|%>
+    <div class='travel-registration-form__field'>
+      <div class='travel-registration-form__field--left'>
+        <%= f.label :旅行名, class: 'travel-registration-form__label'%>
+      </div>
+      <div class='travel-registration-form__field--right'>
+        <%= f.text_field :name, class: 'travel-registration_name travel-registration_name-form__input', placeholder: '旅行名を入力してください'%>
+      </div>
+    </div>
+    <div class='travel-registration-form__field'>
+    </div>
+    <div class='travel-registration-form__field'>
+      <div class='travel-registration-form__field--left'>
+        <label class='travel-registration-form__label' for='chat_room_チャットメンバー'>参加Gr</label>
+      </div>
+      <div class='travel-registration-form__field--right'>
+      </div>
+    </div>
+    <div class='travel-registration-form__field'>
+      <div class='travel-registration-form__field--left'></div>
+      <div class='travel-registration-form__field--right'>
+        <%= f.submit class: 'travel-registration-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
