@@ -11,10 +11,13 @@
         <%= f.text_field :name, class: 'travel-registration_name travel-registration_name-form__input', placeholder: '旅行名を入力してください'%>
       </div>
     </div>
-
+    
+    <div class='travel-registration-form__field'>
+    </div>
+    
     <div class='travel-registration-form__field'>
       <div class='travel-registration-form__field--left'>
-        <label class='travel-registration-form__label' for='chat_room_チャットメンバー'>旅行期間</label>
+        <%= f.label :旅行開始日, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
         <input type="date" name="date" form="myform">
@@ -23,10 +26,22 @@
 
     <div class='travel-registration-form__field'>
     </div>
-    
+
     <div class='travel-registration-form__field'>
       <div class='travel-registration-form__field--left'>
-        <label class='travel-registration-form__label' for='chat_room_チャットメンバー'>グループメンバー</label>
+        <%= f.label :旅行終了日, class: 'travel-registration-form__label'%>
+      </div>
+      <div class='travel-registration-form__field--right'>
+        <input type="date" name="date" form="myform">
+      </div>
+    </div>
+    
+    <div class='travel-registration-form__field'>
+    </div>
+
+    <div class='travel-registration-form__field'>
+      <div class='travel-registration-form__field--left'>
+        <%= f.label :旅行する男気グループ選択, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
           <select name="group[user_ids][]">
@@ -34,12 +49,13 @@
             <% Group.all.each do |group| %>
               <option><%= group.name %></option>
             <% end %>
-        </select>  
+          </select>  
       </div>
     </div>
 
     <div class='travel-registration-form__field'>
-      <div class='travel-registration-form__field--left'></div>
+      <div class='travel-registration-form__field--left'>
+      </div>
       <div class='travel-registration-form__field--right'>
         <%= f.submit class: 'travel-registration-form__action-btn'%>
       </div>
