@@ -11,7 +11,7 @@
         <%= f.text_field :name, class: 'travel-registration_name travel-registration_name-form__input', placeholder: '旅行名を入力してください'%>
       </div>
     </div>
-    
+
     <div class='travel-registration-form__field'>
     </div>
     
@@ -20,7 +20,7 @@
         <%= f.label :旅行開始日, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
-        <input type="date" name="date" form="myform">
+        <input type="date" id ="start_day" name="start_day">
       </div>
     </div>
 
@@ -32,7 +32,7 @@
         <%= f.label :旅行終了日, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
-        <input type="date" name="date" form="myform">
+        <input type="date" id ="end_day" name="end_day">
       </div>
     </div>
     
@@ -44,12 +44,7 @@
         <%= f.label :旅行する男気グループ選択, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
-          <select name="group[user_ids][]">
-            <option value="">旅行に参加するGrを選択してください</option>
-            <% Group.all.each do |group| %>
-              <option><%= group.name %></option>
-            <% end %>
-          </select>  
+        <%= collection_select(:group, :groupname, @groups, :id, :name, {:include_blank => true}) %>
       </div>
     </div>
 
