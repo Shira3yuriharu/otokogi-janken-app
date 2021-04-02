@@ -20,7 +20,7 @@
         <%= f.label :旅行開始日, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
-        <input type="date" id ="start_day" name="start_day">
+        <%= f.date_select :start_day, use_month_numbers: true, default: { year: 2010, month: 1, day: 1 } %>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
         <%= f.label :旅行終了日, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
-        <input type="date" id ="end_day" name="end_day">
+        <%= f.date_select :end_day, use_month_numbers: true, default: { year: 2010, month: 1, day: 1 } %>
       </div>
     </div>
     
@@ -44,7 +44,7 @@
         <%= f.label :旅行する男気グループ選択, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
-        <%= collection_select(:group, :groupname, @groups, :id, :name, {:include_blank => true}) %>
+        <%= f.collection_select(:group_id, Group.all, :id, :name, {prompt: "旅行を行う男気グループを選択ください"}) %>
       </div>
     </div>
 
@@ -52,7 +52,7 @@
       <div class='travel-registration-form__field--left'>
       </div>
       <div class='travel-registration-form__field--right'>
-        <%= f.submit class: 'travel-registration-form__action-btn'%>
+        <%= f.submit "登録する" %>
       </div>
     </div>
 

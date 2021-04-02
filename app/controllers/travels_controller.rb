@@ -16,7 +16,7 @@ class TravelsController < ApplicationController
   private
 
   def travel_params
-    params.require(:travel).permit(:name, :name2, :start_day, :end_day, :groupname)
+    params.require(:travel).permit(:name, :start_day, :end_day, :group_id)
   end
 
 end
