@@ -1,7 +1,6 @@
 class TravelsController < ApplicationController
   def new
     @travel = Travel.new
-    @groups = Group.all
   end
 
   def create
