@@ -49,8 +49,8 @@
 | travel          | reference| null: false                |
 | user            | reference| null: false                |
 ### Association
-- belongs_to :user
 - belongs_to :travel
+- belongs_to :user
 - has_many :results
 
 
