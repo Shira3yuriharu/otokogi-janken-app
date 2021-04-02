@@ -46,10 +46,10 @@
                         <mxPoint x="408" y="318" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="" style="endArrow=ERmany;html=1;rounded=0;endFill=0;startArrow=ERone;startFill=0;exitX=0.587;exitY=-0.01;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.6;entryY=1.08;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="8" edge="1">
+                <mxCell id="15" value="" style="endArrow=ERmany;html=1;rounded=0;endFill=0;startArrow=ERone;startFill=0;exitX=0.587;exitY=-0.01;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.592;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="110" y="346" as="sourcePoint"/>
-                        <mxPoint x="316" y="370" as="targetPoint"/>
+                        <mxPoint x="315" y="370" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="16" value="travels" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
@@ -88,26 +88,16 @@
                 <mxCell id="26" value="note(string)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="23" vertex="1">
                     <mxGeometry y="86" width="230" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" value="travel(reference/null:false)(FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="23" vertex="1">
+                <mxCell id="27" value="travel_select(reference/null:false)(FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="23" vertex="1">
                     <mxGeometry y="116" width="230" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="user_group(reference/null:false)(FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="23" vertex="1">
+                <mxCell id="28" value="group_user(reference/null:false)(FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="23" vertex="1">
                     <mxGeometry y="146" width="230" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="&lt;span style=&quot;font-size: 12px&quot;&gt;男気ジャンケン結果マスタ&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
                     <mxGeometry x="500" y="750" width="100" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="" style="endArrow=ERmany;html=1;rounded=0;endFill=0;startArrow=ERone;startFill=0;exitX=-0.008;exitY=0.827;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="25" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="330" y="550" as="sourcePoint"/>
-                        <mxPoint x="177" y="325" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="130" y="860"/>
-                            <mxPoint x="130" y="325"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="31" value="" style="endArrow=ERmany;html=1;rounded=0;endFill=0;startArrow=ERone;startFill=0;entryX=0.717;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="23" edge="1">
+                <mxCell id="31" value="" style="endArrow=ERmany;html=1;rounded=0;endFill=0;startArrow=ERone;startFill=0;entryX=0.717;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.718;exitY=1.06;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="45" target="23" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="645" y="700" as="sourcePoint"/>
                         <mxPoint x="655.8299999999999" y="437.80999999999995" as="targetPoint"/>
@@ -178,6 +168,16 @@
                             <mxPoint x="320" y="720"/>
                             <mxPoint x="440" y="720"/>
                             <mxPoint x="440" y="672"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=ERmany;html=1;rounded=0;endFill=0;startArrow=ERone;startFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" edge="1" target="26">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="330" y="550" as="sourcePoint"/>
+                        <mxPoint x="177" y="325" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="120" y="331"/>
+                            <mxPoint x="120" y="881"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
