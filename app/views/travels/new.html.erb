@@ -47,7 +47,7 @@
         <%= f.label :旅行する男気グループ選択, class: 'travel-registration-form__label'%>
       </div>
       <div class='travel-registration-form__field--right'>
-        <%= f.collection_select(:group_id, Group.all, :id, :name, {include_blank: "----"}) %>
+        <%= f.collection_select(:group_id, @group, :id, :name, {include_blank: "----"}) %>
       </div>
     </div>
 

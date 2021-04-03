@@ -46,9 +46,11 @@
 }
 
 .user-management a{
+  display: flex;
   font-size: 16px;
   color: #FAFAFA;
   text-decoration: none;
+  align-items: flex-end;
 }
 
 .main{
