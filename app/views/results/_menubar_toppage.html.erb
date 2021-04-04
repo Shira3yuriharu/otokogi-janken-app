@@ -4,12 +4,20 @@
   </div>
   <div class="button">
     <%= link_to "■グループ作成", new_group_path %>
-    <a href="#">■旅行計画作成</a>
+    <%= link_to "■旅行計画作成", new_travel_path %>
+    <%= link_to "■ジャンケンを記録する旅行選択", new_travel_select_path %>
     <a href="#">■ジャンケン結果記録</a>
     <a href="#">■男気スポット紹介</a>
   </div>
   <div class="user-management">
-    <%= link_to current_user.nickname, edit_user_path(current_user) %>
+    <div class="user-name">
+      <a href="#">ユーザー名称:</a>
+      <%= link_to current_user.nickname, edit_user_path(current_user) %>
+    </div>
+    <div class="travel-name">
+      <a href="#">男気ジャンケンを記録する旅行名称:</a>
+      <%= @travel_name %>
+    </div>
   </div>
 
 </div>

@@ -10,6 +10,7 @@
 - has_many :groups
 - has_many :comments
 - has_many :group_users
+- has_many :travel_selects
 
 ## groupsテーブル
 | Column          | Type     | Options                    |
@@ -28,7 +29,7 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
-- belongs_to :result
+- has_many :results
 
 ## travels テーブル
 | Column              | Type     | Options                    |
@@ -39,8 +40,19 @@
 | group               | reference| null: false                |
 ### Association
 - belongs_to :group
-- belongs_to :result
-- belongs_to :comment
+- has_many :travel_selects
+- has_many :comments
+
+## travel_selectsテーブル
+| Column          | Type     | Options                    |
+| --------------  | ------   | ------------------------   |
+| travel          | reference| null: false                |
+| user            | reference| null: false                |
+### Association
+- belongs_to :travel
+- belongs_to :user
+- has_many :results
+
 
 ## results テーブル
 | Column           | Type     | Options    |
@@ -49,7 +61,17 @@
 | item_category_id | integer  |            |
 | note             | string   |            |
 | travel           | reference| null: false|
-| user_group       | reference| null: false|
+| group_user       | reference| null: false|
 ### Association
+- belongs_to :travel_select
+- belongs_to :group_user
+
+## commentsテーブル
+| Column          | Type     | Options      |
+| --------------  | ------   | ----------   |
+| comment         | string   |              |
+| user            | reference| null: false  |
+| travel          | reference| null: false  |
+### Association
+- belongs_to :user
 - belongs_to :travel
-- belongs_to :user_group
