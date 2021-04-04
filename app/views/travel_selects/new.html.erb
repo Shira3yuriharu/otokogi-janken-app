@@ -11,7 +11,7 @@
         <%= f.label :男気ジャンケンの記録を行う旅行の選択, class: 'travel-select-form__label'%>
       </div>
       <div class='travel-select-form__field--right'>
-        <%= f.collection_select(:travel_id, @travel2, :id, :name, {include_blank: "----"}) %>
+        <%= f.collection_select(:travel_id, @travels, :id, :name, {include_blank: "----"}) %>
       </div>
     </div>
 
