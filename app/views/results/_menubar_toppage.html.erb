@@ -10,8 +10,14 @@
     <a href="#">■男気スポット紹介</a>
   </div>
   <div class="user-management">
-    <%= link_to current_user.nickname, edit_user_path(current_user) %>
-    <%= link_to TravelSelect.find(2).id %>
+    <div class="user-name">
+      <a href="#">ユーザー名称:</a>
+      <%= link_to current_user.nickname, edit_user_path(current_user) %>
+    </div>
+    <div class="travel-name">
+      <a href="#">男気ジャンケンを記録する旅行名称:</a>
+      <%= @travel_name %>
+    </div>
   </div>
 
 </div>
