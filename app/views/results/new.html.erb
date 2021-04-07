@@ -1,0 +1,48 @@
+<div class='result-input-form'>
+ 
+  <h1>男気ジャンケン記録ページ</h1>
+  <%=form_with model: @result, local: true do |f|%>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
+    <%= render 'devise/shared/error_messages', model: f.object %>
+
+    <div class='result-input-form__field'>
+      <div class='result-input-form__field--left'>
+        <%= f.label :男気がある人を選択, class: 'result-input-form__label'%>
+      </div>
+      <div class='result-input-form__field--right'>
+        <%= f.collection_select(:group_user_id, @result, :id, :nickname, {include_blank: "----"}) %>
+      </div>
+    </div>
+
+    <div class='result-input-form__field'>
+      <div class='result-input-form__field--left'>
+        <%= f.label :金額, class: 'result-input-form__label'%>
+      </div>
+      <div class='result-input-form__field--right'>
+        <%= f.number_field :money %>
+      </div>
+    </div>
+
+<%# 4/7↑ここまで！！ %>
+
+    <div class='result-input-form__field'>
+      <div class='result-input-form__field--left'>
+        <%= f.label :品目, class: 'result-input-form__label'%>
+      </div>
+      <div class='result-input-form__field--right'>
+        <%= f.number_field :item_category_id %>
+      </div>
+    </div>
+
+    <div class='result-input-form__field'>
+      <div class='result-input-form__field--left'>
+      </div>
+      <div class='result-input-form__field--right'>
+        <%= f.submit "登録する" %>
+      </div>
+    </div>
+
+  <% end %>
+
+</div>
