@@ -9,4 +9,11 @@ class ResultsController < ApplicationController
       @travel_name = Travel.find(@travel_select_last_travel_id).name
     end
   end
+
+  def new
+  end
+
+  def create
+  end
+  
 end
