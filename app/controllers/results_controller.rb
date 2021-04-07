@@ -11,9 +11,21 @@ class ResultsController < ApplicationController
   end
 
   def new
+    @result = Result.new
+
+    @user = User.find(current_user.id)
+    @travel_select_last = TravelSelect.where(user_id: @user).last
+    if @travel_select_last.nil?
+      # viewを表示させない。旅行選択画面で登録するよう促す
+    else
+      @travel_select_last_travel_id = @travel_select_last.travel_id
+      @group_id = Travel.where(id: @travel_select_last_travel_id).select('group_id')
+      @user_ids = GroupUser.where(group_id: @group_id).select('user_id')
+      @nicknames = User.where(id: @user_ids).select('nickname')
+    end
   end
 
   def create
   end
-  
+
 end

@@ -11,7 +11,7 @@
         <%= f.label :男気がある人を選択, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
-        <%= f.collection_select(:group_user_id, @result, :id, :nickname, {include_blank: "----"}) %>
+        <%= f.collection_select(:group_user_id, @nicknames, :id, :nickname, {include_blank: "----"}) %>
       </div>
     </div>
 
@@ -24,14 +24,12 @@
       </div>
     </div>
 
-<%# 4/7↑ここまで！！ %>
-
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :品目, class: 'result-input-form__label'%>
+        <%= f.label :備考, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
-        <%= f.number_field :item_category_id %>
+        <%= f.text_field :note,size: 30 %>
       </div>
     </div>
 
