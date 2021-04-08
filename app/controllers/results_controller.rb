@@ -21,8 +21,11 @@ class ResultsController < ApplicationController
       @travel_select_last_travel_id = @travel_select_last.travel_id
       @group_id = Travel.where(id: @travel_select_last_travel_id).select('group_id')
       @user_ids = GroupUser.where(group_id: @group_id).select('user_id')
-      @nicknames = User.where(id: @user_ids).select('nickname')
+      # ↓もともとのコード！
+      # @nicknames = User.where(id: @user_ids).select('nickname')
+      @nicknames = User.where(id: @user_ids)
     end
+
   end
 
   def create
@@ -38,7 +41,7 @@ class ResultsController < ApplicationController
   private
 
   def result_params
-    params.require(:result).permit(:group_user_id,:money,:note).merge(travel_id: @travel_select_last_travel_id)
+    params.require(:result).permit(:nickname,:money,:note).merge(travel_id: @travel_select_last_travel_id)
   end
 
 end

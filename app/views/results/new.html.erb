@@ -11,7 +11,7 @@
         <%= f.label :男気がある人を選択, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
-        <%= f.collection_select(:group_user_id, @nicknames, :id, :nickname, {include_blank: "----"}) %>
+        <%= f.collection_select(:nickname, @nicknames, :nickname, :nickname, {include_blank: "----"}) %>
       </div>
     </div>
 
