@@ -16,7 +16,7 @@ class ResultsController < ApplicationController
     @user = User.find(current_user.id)
     @travel_select_last = TravelSelect.where(user_id: @user).last
     if @travel_select_last.nil?
-      # viewを表示させない。旅行選択画面で登録するよう促す
+      redirect_to new_travel_select_path
     else
       @travel_select_last_travel_id = @travel_select_last.travel_id
       @group_id = Travel.where(id: @travel_select_last_travel_id).select('group_id')

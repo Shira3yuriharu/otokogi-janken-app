@@ -9,7 +9,16 @@ class TravelsController < ApplicationController
     # current_user_belong_to_group = GroupUser.where( user_id: current_user.id )
     # @group = Group.where( id: "22")
     # ↓groups→groupに変更
-    @group = current_user.groups.each do |group|
+    # @groups = current_user.groups.each do |group|
+    @user = User.find(current_user.id)
+    @groups = GroupUser.where(user_id: @user)
+    @groups_check = @groups.last
+    
+    if @groups_check.nil?
+      redirect_to new_group_path
+    else
+      @groups = current_user.groups.each do |group|
+      end
     end
 
   end
