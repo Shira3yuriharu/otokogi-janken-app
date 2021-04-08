@@ -26,6 +26,19 @@ class ResultsController < ApplicationController
   end
 
   def create
+    @result = Result.new(result_params)
+    if @result.save
+      redirect_to root_path
+    else
+      render :new
+    end
+    binding.pry
+  end
+
+  private
+
+  def result_params
+    params.require(:result).permit(:group_user_id,:money,:note).merge(travel_id: @travel_select_last_travel_id)
   end
 
 end
