@@ -46,7 +46,7 @@ class ResultsController < ApplicationController
   private
 
   def result_params
-    params.require(:result).permit(:nickname,:money,:note).merge(travel_select_id: @travel_select_last_id)
+    params.require(:result).permit(:nickname, :money, :note, :image).merge(travel_select_id: @travel_select_last_id)
   end
 
 end
