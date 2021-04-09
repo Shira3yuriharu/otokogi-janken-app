@@ -32,12 +32,10 @@ ActiveRecord::Schema.define(version: 2021_04_07_102453) do
     t.integer "money", null: false
     t.integer "item_category_id"
     t.string "note"
-    t.bigint "travel_id"
-    t.bigint "group_user_id"
+    t.bigint "travel_select_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["group_user_id"], name: "index_results_on_group_user_id"
-    t.index ["travel_id"], name: "index_results_on_travel_id"
+    t.index ["travel_select_id"], name: "index_results_on_travel_select_id"
   end
 
   create_table "travel_selects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -74,8 +72,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_102453) do
 
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
-  add_foreign_key "results", "group_users"
-  add_foreign_key "results", "travels"
+  add_foreign_key "results", "travel_selects"
   add_foreign_key "travel_selects", "travels"
   add_foreign_key "travel_selects", "users"
   add_foreign_key "travels", "groups"
