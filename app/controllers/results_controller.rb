@@ -29,6 +29,10 @@ class ResultsController < ApplicationController
   end
 
   def create
+    @user = User.find(current_user.id)
+    @travel_select_last = TravelSelect.where(user_id: @user).last
+    @travel_select_last_id = @travel_select_last.id
+
     @result = Result.new(result_params)
     if @result.save
       redirect_to root_path
@@ -36,12 +40,13 @@ class ResultsController < ApplicationController
       render :new
     end
     
+    # binding.pry
   end
 
   private
 
   def result_params
-    params.require(:result).permit(:nickname,:money,:note).merge(travel_id: @travel_select_last_travel_id, travel_id: @travel_select_last_travel_id)
+    params.require(:result).permit(:nickname,:money,:note).merge(travel_select_id: @travel_select_last_id)
   end
 
 end
