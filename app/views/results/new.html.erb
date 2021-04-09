@@ -26,6 +26,15 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
+        <%= f.label :品目, class: 'result-input-form__label'%>
+      </div>
+      <div class='result-input-form__field--right'>
+        <%= f.collection_select(:item_category_id, ItemCategory.all, :id, :name ) %>
+      </div>
+    </div>
+
+    <div class='result-input-form__field'>
+      <div class='result-input-form__field--left'>
         <%= f.label :備考, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
