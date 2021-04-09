@@ -35,6 +35,15 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
+        <%= f.label :写真, class: 'result-input-form__label'%>
+      </div>
+      <div class='result-input-form__field--right'>
+        <%= f.file_field :image %>
+      </div>
+    </div>
+
+    <div class='result-input-form__field'>
+      <div class='result-input-form__field--left'>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.submit "登録する" %>
