@@ -23,7 +23,7 @@ class ResultsController < ApplicationController
       @user_ids = GroupUser.where(group_id: @group_id).select('user_id')
       # ↓もともとのコード！
       # @nicknames = User.where(id: @user_ids).select('nickname')
-      @nicknames = User.where(id: @user_ids)
+      # @nicknames = User.where(id: @user_ids)
     end
 
   end
@@ -35,13 +35,13 @@ class ResultsController < ApplicationController
     else
       render :new
     end
-    binding.pry
+    
   end
 
   private
 
   def result_params
-    params.require(:result).permit(:nickname,:money,:note).merge(travel_id: @travel_select_last_travel_id)
+    params.require(:result).permit(:nickname,:money,:note).merge(travel_id: @travel_select_last_travel_id, travel_id: @travel_select_last_travel_id)
   end
 
 end
