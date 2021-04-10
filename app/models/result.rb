@@ -3,4 +3,7 @@ class Result < ApplicationRecord
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :item_category
+
+  validates :nickname, presence: true
+  validates :money, presence: true
 end

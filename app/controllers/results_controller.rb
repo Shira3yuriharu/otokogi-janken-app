@@ -37,7 +37,7 @@ class ResultsController < ApplicationController
     if @result.save
       redirect_to root_path
     else
-      render :new
+      redirect_to new_result_path
     end
     
     # binding.pry

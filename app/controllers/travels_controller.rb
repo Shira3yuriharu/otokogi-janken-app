@@ -29,7 +29,7 @@ class TravelsController < ApplicationController
     if @travel.save
       redirect_to root_path
     else
-      render :new
+      redirect_to new_travel_path
     end
   end
 

@@ -20,7 +20,7 @@ class TravelSelectsController < ApplicationController
     if @travel_select.save
       redirect_to root_path
     else
-      render :new
+      redirect_to new_travel_select_path
     end
   end
 
