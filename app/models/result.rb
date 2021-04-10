@@ -6,4 +6,5 @@ class Result < ApplicationRecord
 
   validates :nickname, presence: true
   validates :money, presence: true
+
 end

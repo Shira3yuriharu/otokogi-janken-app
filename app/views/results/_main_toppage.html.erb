@@ -13,6 +13,7 @@
   </div>
   <div class="select-trip-chart">
     <a href="#">■選択された男気旅行結果</a>
+    <%= pie_chart @results.group(:nickname).count %>
   </div>
 </div>
 
