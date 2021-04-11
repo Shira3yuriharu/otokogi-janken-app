@@ -21,8 +21,16 @@ class ResultsController < ApplicationController
     # p@all
   # }
     @element = @results_nickname_sum.length 
-    @key = @results_nickname_sum.keys[1]
-    @value = @results_nickname_sum.values[1]
+      @key0 = @results_nickname_sum.keys[0]
+      @value0 = @results_nickname_sum.values[0]
+      @key1 = @results_nickname_sum.keys[1]
+      @value1 = @results_nickname_sum.values[1]
+      @key2 = @results_nickname_sum.keys[2]
+      @value2 = @results_nickname_sum.values[2]
+      @key3 = @results_nickname_sum.keys[3]
+      @value3 = @results_nickname_sum.values[3]
+      @key4 = @results_nickname_sum.keys[4]
+      @value4 = @results_nickname_sum.values[4]
 
     # @results_nickname_sum = select nickname,sum(money) from results group by nickname;
     # @data = [['1', 100], ['2', 200], ['3', 500]]

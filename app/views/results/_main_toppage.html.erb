@@ -18,13 +18,21 @@
 } %> 
     <%# ↓複数種類の折れ線グラフ %>
     <%# <%= line_chart @results.group(:nickname).group(:money).count,width: "300px", height: "200px" %> 
-    <%= pie_chart @results.group(:nickname).count,width: "100px", height: "100px" %>
-    <%= @results_nickname_sum %> 
+    <div class="select-trip-chart-left">
+      <%= pie_chart @results.group(:nickname).count,width: "300px", height: "200px" %>
+    </div>
+    <%# <%= @results_nickname_sum %> 
     <%# <%= @first %>	 
-    <%= @all %>
-    <%= @element %>	
-    <%= @key %>
-    <%= @value %>
+    <%# <%= @all %> 
+    <%# <%= @element %>
+    <div class="select-trip-chart-right">
+      <p>■<%= @key0 %>：<%= @value0 %></p>
+      <p>■<%= @key1 %>：<%= @value1 %></p>
+      <p>■<%= @key2 %>：<%= @value2 %></P>
+      <p>■<%= @key3 %>：<%= @value3 %></p>
+      <p>■<%= @key4 %>：<%= @value4 %></p>
+    </div>
+
     <%# <%= line_chart @data, width: "300px", height: "100px",colors: ["pink", "#999"] %> 
 
   </div>
