@@ -33,7 +33,7 @@
 .button a{
   display: flex;
   font-size: 9px;
-  color: #FAFAFA;
+  color: black;
   text-decoration: none;
   align-items: flex-end;
 }

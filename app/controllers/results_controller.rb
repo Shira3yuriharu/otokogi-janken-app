@@ -9,7 +9,24 @@ class ResultsController < ApplicationController
       @travel_name = Travel.find(@travel_select_last_travel_id).name
     end
 
+    # 円グラフ
     @results = Result.all
+
+    # 価格合計表示
+    # @results_sum = Result.all.sum(:money)
+    @results_nickname_sum = Result.group(:nickname).sum(:money)
+    # @first = @results_nickname_sum["カメックス"]
+    @all = @results_nickname_sum.values.sort.reverse
+    # @all_all = @all.each {|all|
+    # p@all
+  # }
+    @element = @results_nickname_sum.length 
+    @key = @results_nickname_sum.keys[1]
+    @value = @results_nickname_sum.values[1]
+
+    # @results_nickname_sum = select nickname,sum(money) from results group by nickname;
+    # @data = [['1', 100], ['2', 200], ['3', 500]]
+    # binding.pry
   end
 
   def new

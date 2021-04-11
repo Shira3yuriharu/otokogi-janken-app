@@ -13,8 +13,20 @@
   </div>
   <div class="select-trip-chart">
     <a href="#">■選択された男気旅行結果</a>
-    <%= line_chart @results.group(:nickname).group(:money).count, 
-    width: "600px", height: "200px" %>
+    <%# <%= line_chart @results.map {|result|
+    {name：result.nickname、data：result.money（：created_at）.count}
+} %> 
+    <%# ↓複数種類の折れ線グラフ %>
+    <%# <%= line_chart @results.group(:nickname).group(:money).count,width: "300px", height: "200px" %> 
+    <%= pie_chart @results.group(:nickname).count,width: "100px", height: "100px" %>
+    <%= @results_nickname_sum %> 
+    <%# <%= @first %>	 
+    <%= @all %>
+    <%= @element %>	
+    <%= @key %>
+    <%= @value %>
+    <%# <%= line_chart @data, width: "300px", height: "100px",colors: ["pink", "#999"] %> 
+
   </div>
 </div>
 
