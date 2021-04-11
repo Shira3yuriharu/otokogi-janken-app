@@ -13,7 +13,8 @@
   </div>
   <div class="select-trip-chart">
     <a href="#">■選択された男気旅行結果</a>
-    <%= pie_chart @results.group(:nickname).count %>
+    <%= line_chart @results.group(:nickname).group(:money).count, 
+    width: "600px", height: "200px" %>
   </div>
 </div>
 
