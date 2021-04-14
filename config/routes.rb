@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :travels, only: [:new, :create]
   resources :travel_selects, only: [:new, :create]
   resources :results, only: [:new, :create]
+
+  get 'results/:id', to:'results#checked'
 end
