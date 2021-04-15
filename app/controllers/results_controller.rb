@@ -38,6 +38,7 @@ class ResultsController < ApplicationController
   end
 
   def checked
+    binding.pry
     item = Result.find(params[:id])
     render json: { post: item }
   end
