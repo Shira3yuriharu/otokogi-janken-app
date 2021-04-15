@@ -38,9 +38,12 @@ class ResultsController < ApplicationController
   end
 
   def checked
-    binding.pry
-    item = Result.find(params[:id])
-    render json: { post: item }
+    @travel = TravelSelect.where(travel_id: params[:id])
+    @travel_select_pie = Result.where(travel_select_id: @travel.ids)
+    # binding.pry
+    # item = Result.find(params[:id])
+    # render json: { post: item }
+    
   end
 
   def new
