@@ -42,7 +42,7 @@ class ResultsController < ApplicationController
     @travel_select_pie = Result.where(travel_select_id: @travel.ids)
     # binding.pry
     # item = Result.find(params[:id])
-    # render json: { post: item }
+    render json: { post: @travel_select_pie }
     
   end
 
