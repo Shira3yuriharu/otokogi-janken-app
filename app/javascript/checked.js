@@ -59,6 +59,7 @@ function check() {
         //  }
         }
 
+        // 合計金額表示処理
         let a = 0;
         const uniqueArray = [...new Set(nickname)];
         i2 = uniqueArray.length
@@ -80,8 +81,8 @@ function check() {
              if (step === 2){
               ele3.appendChild(document.createTextNode((a)));
              }
-             if (step === 4){
-              ele3.appendChild(document.createTextNode((a)));
+             if (step === 3){
+              ele4.appendChild(document.createTextNode((a)));
              }
         }
         console.log (uniqueArray)
@@ -89,7 +90,7 @@ function check() {
         console.log (travel_select_pie)
         console.log (i3)
         
-        console.log (element)
+        console.log (element1)
         // console.log (element[0])
         console.log (ele2)
 
