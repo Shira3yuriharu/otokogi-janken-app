@@ -29,7 +29,6 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
-- has_many :results
 
 ## travels テーブル
 | Column              | Type     | Options                    |
@@ -57,14 +56,14 @@
 ## results テーブル
 | Column           | Type     | Options    |
 | -------          | ------   | ---------  |
+| nickname         | string   | null: false|
 | money            | integer  | null: false|
 | item_category_id | integer  |            |
 | note             | string   |            |
-| travel           | reference| null: false|
-| group_user       | reference| null: false|
+| travel_select    | reference| null: false|
 ### Association
 - belongs_to :travel_select
-- belongs_to :group_user
+
 
 ## commentsテーブル
 | Column          | Type     | Options      |

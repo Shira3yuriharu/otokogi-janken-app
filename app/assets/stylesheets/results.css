@@ -33,7 +33,7 @@
 .button a{
   display: flex;
   font-size: 9px;
-  color: #FAFAFA;
+  color: black;
   text-decoration: none;
   align-items: flex-end;
 }
@@ -48,14 +48,14 @@
 
 .user-name{
   display: flex;
-  font-size: 16px;
+  font-size: 12px;
   text-decoration: none;
   align-items: flex-end;
 }
 
 .travel-name{
   display: flex;
-  font-size: 16px;
+  font-size: 12px;
   text-decoration: none;
   align-items: flex-end;
 }
@@ -87,6 +87,23 @@
   height: calc((100vh - 100px)/2);
   background-color: blue;
   padding: 10px;
+  display: flex;
+}
+
+.select-trip-chart-left {
+  width: calc(50vw/2);
+  height: calc((100vh - 100px)/2);
+  background-color: blue;
+  padding: 10px;
+}
+
+.select-trip-chart-right {
+  width: calc(50vw/2);
+  height: calc((100vh - 100px)/2);
+  background-color: blue;
+  padding: 10px;
+  color: #FAFAFA;
+  font-size: 10px;
 }
 
 .select-trip-chart a{

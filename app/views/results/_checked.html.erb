@@ -1,0 +1,14 @@
+    <div class="select-trip-chart-left">
+      <% if @travel_select_pie.empty? then %>
+        <a href="#">旅行名称を押下ください</a>
+      <% else %>
+        <%= pie_chart @travel_select_pie.group(:nickname).count,width: "300px", height: "200px" %>
+      <% end %>
+    </div>
+    <div class="select-trip-chart-right">
+      <p>■<%= @key0 %>：<%= @value0 %></p>
+      <p>■<%= @key1 %>：<%= @value1 %></p>
+      <p>■<%= @key2 %>：<%= @value2 %></P>
+      <p>■<%= @key3 %>：<%= @value3 %></p>
+      <p>■<%= @key4 %>：<%= @value4 %></p>
+    </div>

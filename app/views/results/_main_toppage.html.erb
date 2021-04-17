@@ -3,7 +3,7 @@
     <a href="#">■ユーザーが参加した男気旅行一覧</a>
      <% current_user.groups.each do |group| %>
       <% group.travels.each do |travel| %>
-        <div class="travel">
+        <div class="travel" data-id=<%= travel.id %>>
           <div class="travel-name-list">
             <a href="#"><%= travel.name %></a>
           </div>
@@ -13,6 +13,7 @@
   </div>
   <div class="select-trip-chart">
     <a href="#">■選択された男気旅行結果</a>
+      <%= render partial: "checked" %>
   </div>
 </div>
 
