@@ -136,14 +136,13 @@ function check() {
 
 
 
-        console.log (uniqueArray)
-        console.log (travel_select_pie[0]["nickname"])
-        console.log (travel_select_pie)
-        console.log (i3)
+        // console.log (uniqueArray)
+        // console.log (travel_select_pie[0]["nickname"])
+        // console.log (travel_select_pie)
+        // console.log (i3)
         
-        console.log (element1)
         // console.log (element[0])
-        console.log (ele2)
+        // console.log (ele2)
 
       }
      });

@@ -278,32 +278,6 @@
 }
 
 
-.select-trip-chart-2 {
-  width: 50vw;
-  height: calc((100vh - 100px)/10);
-  background-color: blue;
-  color: #FAFAFA;
-  padding: 10px;
-  flex-direction: column;
-}
-
-.select-trip-chart-3 {
-  width: 50vw;
-  height: calc((100vh - 100px)/10);
-  background-color: blue;
-  color: #FAFAFA;
-  padding: 10px;
-  flex-direction: column;
-}
-
-.select-trip-chart-4 {
-  width: 50vw;
-  height: calc((100vh - 100px)/10);
-  background-color: blue;
-  color: #FAFAFA;
-  padding: 10px;
-  flex-direction: column;
-}
 
 .select-trip-chart-left {
   width: calc(50vw/2);
@@ -365,3 +339,190 @@
   text-decoration: none;
 }
 
+.select-gr-title {
+  width: 50vw;
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.nickname-gr-title {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.money-gr-title {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.times-gr-title {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.select-gr-result1 {
+  width: 50vw;
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.gr-nickname1 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-money1 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-times1 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.select-gr-result2 {
+  width: 50vw;
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.gr-nickname2 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-money2 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-times2 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.select-gr-result3 {
+  width: 50vw;
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.gr-nickname3 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-money3 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-times3 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.select-gr-result4 {
+  width: 50vw;
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.gr-nickname4 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-money4 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.gr-times4 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/15);
+  background-color: green;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
