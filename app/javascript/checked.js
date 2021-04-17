@@ -60,7 +60,13 @@ function check() {
         }
 
         // 合計金額表示処理
+          ele1.innerHTML='';
+          ele2.innerHTML='';
+          ele3.innerHTML='';
+          ele4.innerHTML='';
+
         let a = 0;
+        let flg = 0;
         const uniqueArray = [...new Set(nickname)];
         i2 = uniqueArray.length
         for (let step = 0; step < i2; step++) {
@@ -85,6 +91,9 @@ function check() {
               ele4.appendChild(document.createTextNode((a)));
              }
         }
+
+
+
         console.log (uniqueArray)
         console.log (travel_select_pie[0]["nickname"])
         console.log (travel_select_pie)
