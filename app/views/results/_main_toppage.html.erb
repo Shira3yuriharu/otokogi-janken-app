@@ -56,7 +56,7 @@
   <div class="select-belong-group">
     <a href="#">■所属している男気グループ一覧</a>
     <% current_user.groups.each do |group| %>
-      <div class="group">
+      <div class="group" data-id=<%= group.id %>>
         <div class="group-name-list">
           <a href="#"><%= group.name %></a>
         </div>

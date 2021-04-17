@@ -34,6 +34,12 @@ class ResultsController < ApplicationController
     render json: { post: @travel_select_pie }
   end
 
+  def checked2
+    binding.pry
+    @group = Group.where(group_id: params[:id])
+    render json: { post: @group }
+  end
+
   def new
     @result = Result.new
 
