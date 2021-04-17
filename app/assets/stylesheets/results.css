@@ -90,14 +90,161 @@
   flex-direction: column;
 }
 
-.select-trip-chart-1 {
+.select-trip-result1 {
   width: 50vw;
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.nickname1 {
+  width: calc(50vw/3);
   height: calc((100vh - 100px)/10);
   background-color: blue;
   color: #FAFAFA;
   padding: 10px;
   flex-direction: column;
 }
+
+.money1 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.times1 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.select-trip-result2 {
+  width: 50vw;
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.nickname2 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.money2 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.times2 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.select-trip-result3 {
+  width: 50vw;
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.nickname3 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.money3 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.times3 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}-times {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.select-trip-result4 {
+  width: 50vw;
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.nickname4 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.money4 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.times4 {
+  width: calc(50vw/3);
+  height: calc((100vh - 100px)/10);
+  background-color: blue;
+  color: #FAFAFA;
+  padding: 10px;
+  flex-direction: column;
+}
+
 
 .select-trip-chart-2 {
   width: 50vw;
