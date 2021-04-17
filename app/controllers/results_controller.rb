@@ -15,13 +15,6 @@ class ResultsController < ApplicationController
     @travel_select_pie = Result.where(travel_select_id: @travel.ids)
 
     # 価格合計表示
-    # @results_sum = Result.all.sum(:money)
-    # @first = @results_nickname_sum["カメックス"]
-    # @all = @results_nickname_sum.values.sort.reverse
-    # @all_all = @all.each {|all|
-    # p@all
-  # }
-    # @element = @results_nickname_sum.length
     @results_nickname_sum = Result.group(:nickname).sum(:money) 
       @key0 = @results_nickname_sum.keys[0]
       @value0 = @results_nickname_sum.values[0]

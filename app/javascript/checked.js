@@ -1,6 +1,16 @@
 function check() {
   // 表示されているすべての旅行名称を取得している
   const travels = document.querySelectorAll(".travel");
+
+  const element1 = document.getElementsByClassName( "select-trip-chart-1" )[0] ;
+  const ele1 = element1.appendChild(document.createElement('p'))
+  const element2 = document.getElementsByClassName( "select-trip-chart-2" )[0] ;
+  const ele2 = element2.appendChild(document.createElement('p'))
+  const element3 = document.getElementsByClassName( "select-trip-chart-3" )[0] ;
+  const ele3 = element3.appendChild(document.createElement('p'))
+  const element4 = document.getElementsByClassName( "select-trip-chart-4" )[0] ;
+  const ele4 = element4.appendChild(document.createElement('p'))
+
   travels.forEach(function(travel) {
     if (travel.getAttribute("data-load") != null) {
       return null;
@@ -28,7 +38,61 @@ function check() {
         }
         // レスポンスされたデータを変数travel_select_pieに代入している
         const travel_select_pie = XHR.response.post;
+        // 全てを取り出すにはFor each文を記述する。mapなど
+        // ele2.appendChild(document.createTextNode(travel_select_pie[0]["id"]));
+
+        // travel_select_pie.foreach(function(item){
+        //     console.log(item["id"]);
+        //   });
+
+
+
+
+        i = travel_select_pie.length
+        var nickname=[];
+        for (let step = 0; step < i; step++) {
+          // ele2.appendChild(document.createTextNode(travel_select_pie[step]["nickname"]));
+          // console.log (travel_select_pie[step]["nickname"])
+          nickname[step]=(travel_select_pie[step]["nickname"])
+        //   if (user1 == null) {
+        //   user1 = (travel_select_pie[step]["nickname"])
+        //  }
+        }
+
+        let a = 0;
+        const uniqueArray = [...new Set(nickname)];
+        i2 = uniqueArray.length
+        for (let step = 0; step < i2; step++) {
+          let a = 0;
+          i3 = travel_select_pie.length
+            for(let step2 = 0; step2<i3; step2++){
+              if (uniqueArray[step] === travel_select_pie[step2]["nickname"]){
+                a = travel_select_pie[step2]["money"] + a
+              }
+            }
+            console.log (a)
+            if (step === 0){
+             ele1.appendChild(document.createTextNode((a)));
+            }
+            if (step === 1){
+              ele2.appendChild(document.createTextNode((a)));
+             }
+             if (step === 2){
+              ele3.appendChild(document.createTextNode((a)));
+             }
+             if (step === 4){
+              ele3.appendChild(document.createTextNode((a)));
+             }
+        }
+        console.log (uniqueArray)
+        console.log (travel_select_pie[0]["nickname"])
         console.log (travel_select_pie)
+        console.log (i3)
+        
+        console.log (element)
+        // console.log (element[0])
+        console.log (ele2)
+
       }
      });
   });

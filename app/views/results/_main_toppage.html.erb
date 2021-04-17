@@ -6,6 +6,7 @@
         <div class="travel" data-id=<%= travel.id %>>
           <div class="travel-name-list">
             <a href="#"><%= travel.name %></a>
+              <%= link_to '詳細' %>
           </div>
         </div>
       <% end %>
@@ -13,7 +14,11 @@
   </div>
   <div class="select-trip-chart">
     <a href="#">■選択された男気旅行結果</a>
-      <%= render partial: "checked" %>
+      <%# <%= render partial: "checked" %> %>
+      <div class="select-trip-chart-1"></div>
+      <div class="select-trip-chart-2"></div>
+      <div class="select-trip-chart-3"></div>
+      <div class="select-trip-chart-4"></div>
   </div>
 </div>
 
