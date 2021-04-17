@@ -28,7 +28,7 @@ class ResultsController < ApplicationController
       @value4 = @results_nickname_sum.values[4]
   end
 
-  def _checked
+  def checked
     @travel = TravelSelect.where(travel_id: params[:id])
     @travel_select_pie = Result.where(travel_select_id: @travel.ids)
     render json: { post: @travel_select_pie }
