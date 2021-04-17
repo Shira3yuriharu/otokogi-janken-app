@@ -35,11 +35,11 @@ class ResultsController < ApplicationController
   end
 
   def checked2
-    # binding.pry
     @travels = Travel.where(group_id: params[:id])
     @travel_selects = TravelSelect.where(travel_id: @travels)
-    @results = Result.where(travel_select_id: @travel_selects)
-    @render json: { post: @results }
+    @results = Result.where(travel_select_id: @travel_selects.ids)
+    render json: { post: @results }
+    # binding.pry
   end
 
   def new
