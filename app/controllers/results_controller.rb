@@ -15,13 +15,6 @@ class ResultsController < ApplicationController
     @travel_select_pie = Result.where(travel_select_id: @travel.ids)
 
     # 価格合計表示
-    # @results_sum = Result.all.sum(:money)
-    # @first = @results_nickname_sum["カメックス"]
-    # @all = @results_nickname_sum.values.sort.reverse
-    # @all_all = @all.each {|all|
-    # p@all
-  # }
-    # @element = @results_nickname_sum.length
     @results_nickname_sum = Result.group(:nickname).sum(:money) 
       @key0 = @results_nickname_sum.keys[0]
       @value0 = @results_nickname_sum.values[0]
@@ -35,10 +28,18 @@ class ResultsController < ApplicationController
       @value4 = @results_nickname_sum.values[4]
   end
 
-  def _checked
+  def checked
     @travel = TravelSelect.where(travel_id: params[:id])
     @travel_select_pie = Result.where(travel_select_id: @travel.ids)
     render json: { post: @travel_select_pie }
+  end
+
+  def checked2
+    @travels = Travel.where(group_id: params[:id])
+    @travel_selects = TravelSelect.where(travel_id: @travels)
+    @results = Result.where(travel_select_id: @travel_selects.ids)
+    render json: { post: @results }
+    # binding.pry
   end
 
   def new

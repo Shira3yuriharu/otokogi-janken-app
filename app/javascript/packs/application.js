@@ -10,6 +10,7 @@ require("channels")
 
 require("chartkick/chart.js")
 require("../checked")
+require("../checked2")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
