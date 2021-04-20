@@ -82,6 +82,20 @@
   text-decoration: none;
 }
 
+.travel {
+  width: calc(50vw/2);
+  background-color: blue;
+  color: #FAFAFA;
+  flex-direction: column;
+}
+
+.detail {
+  width: calc(50vw/2);
+  background-color: blue;
+  color: #FAFAFA;
+  flex-direction: column;
+}
+
 .select-trip-chart {
   width: 50vw;
   height: calc((100vh - 100px)/2);

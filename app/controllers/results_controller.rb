@@ -9,6 +9,7 @@ class ResultsController < ApplicationController
       @travel_name = Travel.find(@travel_select_last_travel_id).name
     end
 
+    # 4/20下記削除予定
     # 円グラフ
     # @results = Result.all
     @travel = TravelSelect.where(travel_id: params[:id])
@@ -26,6 +27,8 @@ class ResultsController < ApplicationController
       @value3 = @results_nickname_sum.values[3]
       @key4 = @results_nickname_sum.keys[4]
       @value4 = @results_nickname_sum.values[4]
+    # 4/20上記削除予定
+  
   end
 
   def checked
