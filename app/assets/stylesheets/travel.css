@@ -1,0 +1,15 @@
+.detail-page-title{
+  color:blue;
+}
+
+.detail-page-travel-title{
+  display: flex;
+}
+
+.detail-page-travel-name{
+  color:black;
+}
+
+.detail-page-travel-period{
+  color:black;
+}

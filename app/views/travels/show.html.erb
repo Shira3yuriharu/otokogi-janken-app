@@ -1,1 +1,48 @@
-  <h1>詳細ページ</h1>
+  <h1 class='detail-page-title'>
+  男気ジャンケン結果 詳細ページ
+  </h1>
+
+<div class='detail-page-travel-title'>
+  <h2 class='detail-page-travel-name'>
+  <%= @travel.name%>:
+  </h2>
+
+  <h2 class='detail-page-travel-period'>
+  <%= @travel.start_day%>〜<%= @travel.end_day%>
+  </h2>
+</div>
+
+<div class='travel-result-table'>
+  <div class='container'>
+    <div class='travels-index-item'>
+  <table border="1">
+
+  <thead>
+  <tr>
+    <th>No</th>
+    <th>男気のあった人</th>
+    <th>日時</th>
+    <th>品目</th>
+    <th>金額</th>
+    <th>備考</th>
+  </tr>
+  </thead>
+<tbody>
+  <% @results.each.with_index(1) do |result, i| %>
+    <tr>
+      <td><%= i %></td>
+      <td><%= result.nickname %></td>
+      <td><%= result.created_at %></td>
+      <td><%= result.money %></td>
+      <td><%= result.item_category_id %></td>
+      <td><%= result.note %></td>
+    </tr>
+</tbody>
+  <% end %>
+  </table>
+    </div>
+  </div>
+</div>
+
+
+    

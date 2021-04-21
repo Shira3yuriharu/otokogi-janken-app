@@ -35,6 +35,9 @@ class TravelsController < ApplicationController
 
   def show
     @travel =Travel.find(params[:id])
+    @travel_select = TravelSelect.where(travel_id: @travel.id)
+    @results = Result.where(travel_select_id: @travel_select.ids)
+    # binding.pry
   end
 
   private
