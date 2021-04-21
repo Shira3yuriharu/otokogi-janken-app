@@ -33,7 +33,7 @@
       <td><%= i %></td>
       <td><%= result.nickname %></td>
       <td><%= result.created_at %></td>
-      <td><%= result.item_category_id %></td>
+      <td><%= ItemCategory.data.find{ |s| s[:id] == result.item_category_id }[:name] %></td>
       <td><%= result.money %></td>
       <td><%= result.note %></td>
     </tr>
@@ -43,6 +43,8 @@
     </div>
   </div>
 </div>
+
+
 
 
     
