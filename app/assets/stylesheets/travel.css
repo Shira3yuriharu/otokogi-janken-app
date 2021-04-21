@@ -13,3 +13,9 @@
 .detail-page-travel-period{
   color:black;
 }
+
+.travel-result-table{
+  width: 600px;
+  height: 150px;
+  overflow-y: scroll;
+}
