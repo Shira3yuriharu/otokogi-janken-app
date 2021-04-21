@@ -70,6 +70,7 @@
 }
 
 .trip-history {
+  position: relative;
   width: 50vw;
   height: calc((100vh - 100px)/2);
   background-color: rebeccapurple;
@@ -82,16 +83,22 @@
   text-decoration: none;
 }
 
-.travel {
+.trip-lists {
+  position: absolute;
+  left: 5px;
+  height: calc((100vh - 200px)/2);
   width: calc(50vw/2);
-  background-color: blue;
+  background-color: rebeccapurple;
   color: #FAFAFA;
   flex-direction: column;
 }
 
-.detail {
+.detail-lists {
+  position: absolute;
+  right:  5px; 
+  height: calc((100vh - 200px)/2); 
   width: calc(50vw/2);
-  background-color: blue;
+  background-color: rebeccapurple;
   color: #FAFAFA;
   flex-direction: column;
 }
