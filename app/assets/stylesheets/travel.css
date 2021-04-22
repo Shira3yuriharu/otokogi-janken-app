@@ -21,3 +21,15 @@
   height: 150px;
   overflow-y: scroll;
 }
+
+.result-image-content{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.result-image{
+  width: 33vh;
+  height: 33vh;
+}
