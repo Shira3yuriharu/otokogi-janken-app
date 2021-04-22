@@ -68,7 +68,7 @@
 ## commentsテーブル
 | Column          | Type     | Options      |
 | --------------  | ------   | ----------   |
-| comment         | string   |              |
+| text            | text   |              |
 | user            | reference| null: false  |
 | travel          | reference| null: false  |
 ### Association
