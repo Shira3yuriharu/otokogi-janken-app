@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
 
-  get 'results/:id', to: 'results#checked'
+  get 'results/checked/:id', to: 'results#checked'
   get 'results/group/:id', to: 'results#checked2'
 end

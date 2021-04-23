@@ -74,6 +74,11 @@ class ResultsController < ApplicationController
   end
 
   def show
+    @result = Result.find(params[:id])
+    @travel = TravelSelect.where(id: @result.travel_select_id).last
+    @group_id = Travel.where(id: @travel.travel_id).select('group_id')
+    @user_ids = GroupUser.where(group_id: @group_id).select('user_id')
+    # binding.pry
   end
 
   private
