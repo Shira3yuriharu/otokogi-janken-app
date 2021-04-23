@@ -34,9 +34,13 @@ class TravelsController < ApplicationController
   end
 
   def show
+    # 表及び画像表示
     @travel =Travel.find(params[:id])
     @travel_select = TravelSelect.where(travel_id: @travel.id)
     @results = Result.where(travel_select_id: @travel_select.ids)
+    # コメント表示
+    @comment = Comment.new
+    @comments = @travel.comments.includes(:user)
     # binding.pry
   end
 

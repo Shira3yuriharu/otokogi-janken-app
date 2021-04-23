@@ -52,5 +52,18 @@
   <% end %>
 </div>
 
-
-    
+<div class='container'>
+  <%= form_with(model: [@travel, @comment], local: true) do |form| %>
+    <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+    <%= form.submit "SEND" %>
+  <% end %>
+</div>    
+<div class='comments'>
+  <h4><コメント一覧></h4>
+  <% @comments.each do |comment| %>
+    <p>
+      <%= comment.user.nickname %>
+      <%= comment.text %>
+    <p>
+  <% end %>
+<div>

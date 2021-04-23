@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :travels, only: [:new, :create, :show]
   resources :travel_selects, only: [:new, :create]
   resources :results, only: [:new, :create]
+  resources :travels do
+    resources :comments, only: :create
+  end
 
   get 'results/:id', to: 'results#checked'
   get 'results/group/:id', to: 'results#checked2'
