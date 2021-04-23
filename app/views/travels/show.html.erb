@@ -26,6 +26,7 @@
     <th>品目</th>
     <th>金額</th>
     <th>備考</th>
+    <th></th>
   </tr>
   </thead>
 <tbody>
@@ -37,6 +38,7 @@
       <td><%= ItemCategory.data.find{ |s| s[:id] == result.item_category_id }[:name] %></td>
       <td><%= result.money %></td>
       <td><%= result.note %></td>
+      <td><%= link_to "詳細", result_path(result.id), method: :get %></td>
     </tr>
 </tbody>
   <% end %>
@@ -55,6 +57,7 @@
 </div>
 
 <div class='container'>
+  <h2>■コメント投稿</h2>
   <%= form_with(model: [@travel, @comment], local: true) do |form| %>
     <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
     <%= form.submit "SEND" %>
