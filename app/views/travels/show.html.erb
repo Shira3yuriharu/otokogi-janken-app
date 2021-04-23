@@ -33,7 +33,7 @@
     <tr>
       <td><%= i %></td>
       <td><%= result.nickname %></td>
-      <td><%= result.created_at %></td>
+      <td><%= result.updated_at.strftime("%Y-%m-%d %H:%M") %></td>
       <td><%= ItemCategory.data.find{ |s| s[:id] == result.item_category_id }[:name] %></td>
       <td><%= result.money %></td>
       <td><%= result.note %></td>
@@ -66,7 +66,7 @@
     <p>
       【<%= comment.user.nickname %>】
       <%= comment.text %>
-      （<%= comment.created_at %>）
+      （<%= comment.updated_at.strftime("%Y-%m-%d %H:%M") %>）
     <p>
   <% end %>
 <div>
