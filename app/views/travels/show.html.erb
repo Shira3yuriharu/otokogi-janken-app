@@ -13,10 +13,11 @@
 </div>
 
 <div class='travel-result-table'>
+
   <div class='container'>
     <div class='travels-index-item'>
   <table border="1">
-
+  <h2>■結果一覧</h2>
   <thead>
   <tr>
     <th>No</th>
@@ -45,6 +46,7 @@
 </div>
 
 <div class='result-image-content'>
+<h2>■投稿画像一覧</h2>
   <% @results.each do |result| %>
     <%= link_to travel_path(result.id) do %>
       <%= image_tag result.image, class: "result-image" if result.image.attached? %>
@@ -59,11 +61,12 @@
   <% end %>
 </div>    
 <div class='comments'>
-  <h4><コメント一覧></h4>
+  <h2>■コメント一覧</h2>
   <% @comments.each do |comment| %>
     <p>
-      <%= comment.user.nickname %>
+      【<%= comment.user.nickname %>】
       <%= comment.text %>
+      （<%= comment.created_at %>）
     <p>
   <% end %>
 <div>
