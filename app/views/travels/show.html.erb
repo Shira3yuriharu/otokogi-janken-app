@@ -26,8 +26,8 @@
       <th>品目</th>
       <th>金額</th>
       <th>備考</th>
-      <th>編集リンクボタン</th>
-      <th>削除ボタン</th>
+      <th>編集リンク</th>
+      <th>削除実行</th>
     </tr>
     </thead>
 <tbody>
@@ -49,13 +49,15 @@
   </div>
 </div>
 
-<div class='result-image-content'>
+<div class='container'>
 <h2>■投稿画像一覧</h2>
+<div class='result-image-content'>
   <% @results.each do |result| %>
     <%= link_to travel_path(result.id) do %>
       <%= image_tag result.image, class: "result-image" if result.image.attached? %>
     <% end %>
   <% end %>
+</div>
 </div>
 
 <div class='container'>
