@@ -55,7 +55,8 @@
       <div class='result-input-form__field--left'>
       </div>
       <div class='result-input-form__field--right'>
-        <%= f.submit "登録する" %>
+      <%= link_to '削除', result_path(@result.id), method: :delete %>
+        <%# <%= f.submit "削除する" ,method: :delete %>
       </div>
     </div>
 

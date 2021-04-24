@@ -81,6 +81,12 @@ class ResultsController < ApplicationController
     # binding.pry
   end
 
+  def destroy
+    result = Result.find(params[:id])
+    result.destroy
+    redirect_to root_path
+  end
+
   private
 
   def result_params
