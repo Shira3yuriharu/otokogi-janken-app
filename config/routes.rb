@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :create]
   resources :travels, only: [:new, :create, :show]
   resources :travel_selects, only: [:new, :create]
-  resources :results, only: [:new, :create, :show, :destroy]
+  resources :results, only: [:new, :create, :show, :destroy, :edit, :update]
   resources :travels do
     resources :comments, only: :create
   end

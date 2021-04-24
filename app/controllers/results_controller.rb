@@ -66,6 +66,7 @@ class ResultsController < ApplicationController
     @travel_select_last_id = @travel_select_last.id
 
     @result = Result.new(result_params)
+    # binding.pry
     if @result.save
       redirect_to root_path
     else
@@ -84,6 +85,31 @@ class ResultsController < ApplicationController
   def destroy
     result = Result.find(params[:id])
     result.destroy
+    redirect_to root_path
+  end
+
+  def edit
+    @result = Result.find(params[:id])
+    @travel = TravelSelect.where(id: @result.travel_select_id).last
+    @group_id = Travel.where(id: @travel.travel_id).select('group_id')
+    @user_ids = GroupUser.where(group_id: @group_id).select('user_id')
+
+    # @result = Result.find(params[:id])
+
+    # @travel_select_last_id = @travel.id
+    # binding.pry
+  end
+
+  def update
+    result = Result.find(params[:id])
+    # result.update(result_params)
+
+    @result = Result.find(params[:id])
+    @travel = TravelSelect.where(id: @result.travel_select_id).last
+    @travel_select_last_id = @travel.id
+
+    result.update(result_params)
+    # binding.pry
     redirect_to root_path
   end
 

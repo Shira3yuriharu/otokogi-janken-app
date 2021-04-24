@@ -1,6 +1,6 @@
 <div class='result-input-form'>
  
-  <h1>男気ジャンケン詳細ページ</h1>
+  <h1>男気ジャンケン編集ページ！！！！！</h1>
   <%=form_with model: @result, local: true do |f|%>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
@@ -55,9 +55,7 @@
       <div class='result-input-form__field--left'>
       </div>
       <div class='result-input-form__field--right'>
-      <%# <%= link_to '更新', result_path(@result.id), method: :patch %> 
-      <%= link_to '削除', result_path(@result.id), method: :delete %>
-        <%# <%= f.submit "削除する" ,method: :delete %>
+        <%= f.submit "更新" %>
       </div>
     </div>
 
