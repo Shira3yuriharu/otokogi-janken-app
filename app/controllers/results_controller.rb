@@ -1,13 +1,19 @@
 class ResultsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :checked, :checked2]
+
   def index
-    @user = User.find(current_user.id)
-    @travel_select_last = TravelSelect.where(user_id: @user).last
-    if @travel_select_last.nil?
-      @travel_name = "男気グループ未登録の為、表示できません"
+    if user_signed_in?
+      @user = User.find(current_user.id)
     else
-      @travel_select_last_travel_id = @travel_select_last.travel_id
-      @travel_name = Travel.find(@travel_select_last_travel_id).name
+      @user = User.find(1)
     end
+      @travel_select_last = TravelSelect.where(user_id: @user).last
+      if @travel_select_last.nil?
+        @travel_name = "男気グループ未登録の為、表示できません"
+      else
+        @travel_select_last_travel_id = @travel_select_last.travel_id
+        @travel_name = Travel.find(@travel_select_last_travel_id).name
+      end
 
     # 4/20下記削除予定
     # 円グラフ
