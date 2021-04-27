@@ -1,6 +1,7 @@
 <div class='chat-room-form'>
   <h1>男気グループ新規作成</h1>
   <%=form_with model: @group, local: true do |f|%>
+  <%= render 'devise/shared/error_messages', model: f.object %>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <%= f.label :グループ名, class: 'chat-room-form__label'%>

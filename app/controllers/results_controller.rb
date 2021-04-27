@@ -1,12 +1,8 @@
 class ResultsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :checked, :checked2]
+  # before_action :authenticate_user!, except: [:index, :checked, :checked2]
 
   def index
-    if user_signed_in?
       @user = User.find(current_user.id)
-    else
-      @user = User.find(1)
-    end
       @travel_select_last = TravelSelect.where(user_id: @user).last
       if @travel_select_last.nil?
         @travel_name = "男気グループ未登録の為、表示できません"

@@ -1,14 +1,15 @@
 <div class='result-input-form'>
  
   <h1>男気ジャンケン記録ページ</h1>
-  <%=form_with model: @result, local: true do |f|%>
+  <h3 class='attention'>【必須】は必ず入力ください</h3>
 
+  <%=form_with model: @result, local: true do |f|%>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
     <%= render 'devise/shared/error_messages', model: f.object %>
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :男気がある人を選択, class: 'result-input-form__label'%>
+        <%= f.label :【必須】男気がある人を選択, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.collection_select(:nickname, User.where(id: @user_ids).select('nickname'), :nickname, :nickname, {include_blank: "----"}) %>
@@ -17,7 +18,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :金額, class: 'result-input-form__label'%>
+        <%= f.label :【必須】金額, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.number_field :money %>
@@ -26,7 +27,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :品目, class: 'result-input-form__label'%>
+        <%= f.label :【任意】品目, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.collection_select(:item_category_id, ItemCategory.all, :id, :name ) %>
@@ -35,7 +36,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :備考, class: 'result-input-form__label'%>
+        <%= f.label :【任意】備考, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.text_field :note,size: 30 %>
@@ -44,7 +45,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :写真, class: 'result-input-form__label'%>
+        <%= f.label :【任意】写真, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.file_field :image %>

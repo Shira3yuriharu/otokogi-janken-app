@@ -547,3 +547,23 @@
   padding: 10px;
   flex-direction: column;
 }
+
+.result-input-form__field{
+  text-align: center;
+}
+
+.result-input-form__field--left{
+  text-align: left;
+  margin-left:15%;
+}
+
+.result-input-form{
+  text-align: center;
+  width: 60%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+span{
+  color:red;
+}

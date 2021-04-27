@@ -3,6 +3,7 @@ h1 {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  margin:20px;
 }
 
 h2 {
@@ -113,12 +114,19 @@ li {
 }
 
 select {
-  width: 500px;
+  width: 50%;
   height: 50px;
+  text-align: center;
+
 }
 
 .top-header {
   background-color: #434a54;
   height: 80px;
   width: 100%;
+}
+
+.attention{
+  color: red;
+  margin: 20px;
 }
