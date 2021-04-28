@@ -1,0 +1,13 @@
+.travel-select-form__field--left{
+  padding: 0.5% 25%;
+  text-align: left;
+}
+
+.travel-select-form__field--right{
+  padding: 0.5% 0;
+  text-align: center;
+}
+
+.travel-select-form__button{
+  text-align: center;
+}

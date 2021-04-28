@@ -1,6 +1,6 @@
 <div class='travel-select-form'>
- 
-  <h1>男気ジャンケンの記録を行う旅行の選択ページ</h1>
+  <h1>ジャンケン結果を記録する旅行選択ページ</h1>
+  <h3 class='attention'>【必須】は必ず選択ください</h3>
   <%=form_with model: @travel_select, local: true do |f|%>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
@@ -8,19 +8,15 @@
 
     <div class='travel-select-form__field'>
       <div class='travel-select-form__field--left'>
-        <%= f.label :男気ジャンケンの記録を行う旅行の選択, class: 'travel-select-form__label'%>
+        <%= f.label :【必須】旅行選択, class: 'travel-select-form__label'%>
       </div>
       <div class='travel-select-form__field--right'>
         <%= f.collection_select(:travel_id, @travels, :id, :name, {include_blank: "----"}) %>
       </div>
     </div>
 
-    <div class='travel-select-form__field'>
-      <div class='travel-select-form__field--left'>
-      </div>
-      <div class='travel-select-form__field--right'>
+    <div class='travel-select-form__button'>
         <%= f.submit "登録する" %>
-      </div>
     </div>
 
   <% end %>
