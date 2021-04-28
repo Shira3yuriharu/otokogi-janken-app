@@ -42,7 +42,7 @@
 form input,
 form textarea {
   width: 50%;
-  margin: 5px 0 15px;
+  margin: auto;
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
@@ -62,4 +62,40 @@ form input[type="submit"] {
   margin-top: 15px;
   width: 100%;
   height: 150px;
+}
+
+/* .travel-registration-form{
+  text-align: center;
+} */
+
+.travel-registration-form__field{
+  width: 100%;
+  padding: 0.5% 10%;
+}
+
+
+.travel-registration-form__field--left{
+  text-align: left;
+  padding: 0 25%;
+}
+
+.travel-registration-form__field--right{
+  text-align: center;
+}
+
+.travel-registration-form__field-date{
+  padding: 0.5% 30%;
+  text-align: center;
+}
+
+.travel-registration-form__field-date--left{
+  width: 100%;
+  text-align: left;
+}
+
+.travel-registration-form__field-date--right{
+  text-align: center;
+  display: flex;
+  width: 100%;
+  /* padding: 0 30%; */
 }
