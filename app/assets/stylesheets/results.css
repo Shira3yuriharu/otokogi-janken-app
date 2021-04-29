@@ -14,12 +14,15 @@ html { height: 100vh; }
   left:0%;
   width: 20%;
   height: 100px;
-  background-color:yellowgreen;
+  background-color:#D9D9D9;
   padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
+  border-top: solid 3px #658CBF;
+  border-bottom: double 3px #658CBF;
+  border-right: dashed 1px #658CBF;
 }
 
 .menu-button1 {
@@ -27,8 +30,11 @@ html { height: 100vh; }
   left:20%;
   width: 19%;
   height: 100px;
-  background-color:aqua;
-  padding: 1%;
+  /* background-color:aqua; */
+  /* padding: 1%; */
+  background-color:#D9D9D9;
+  border-top: solid 3px #658CBF;
+  border-bottom: double 3px #658CBF;
 }
 
 .menu-button2 {
@@ -36,8 +42,11 @@ html { height: 100vh; }
   left:39%;
   width: 16%;
   height: 100px;
-  background-color:aqua;
-  padding: 1%;
+  /* background-color:aqua; */
+  /* padding: 1%; */
+  background-color:#D9D9D9;
+  border-top: solid 3px #658CBF;
+  border-bottom: double 3px #658CBF;
 }
 
 .menu-button3 {
@@ -45,8 +54,12 @@ html { height: 100vh; }
   left:55%;
   width: 15%;
   height: 100px;
-  background-color:aqua;
-  padding: 1%;
+  /* background-color:aqua; */
+  /* padding: 1%; */
+  background-color:#D9D9D9;
+  border-top: solid 3px #658CBF;
+  border-bottom: double 3px #658CBF;
+  border-right: dashed 1px #658CBF;
 }
 
 .menu-button1 a{
@@ -86,9 +99,12 @@ html { height: 100vh; }
   left:70%;
   width: 30%;
   height: 100px;
-  background-color:orange;
+  /* background-color:orange; */
   color: black;
-  padding: 1%;
+  /* padding: 1%; */
+  background-color:#D9D9D9;
+  border-top: solid 3px #658CBF;
+  border-bottom: double 3px #658CBF;
 }
 
 .user-management a{
@@ -150,15 +166,19 @@ html { height: 100vh; }
   position: relative;
   width: 50vw;
   height: calc((100vh - 100px)/2);
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
   padding: 10px 0;
   overflow:auto;
   white-space: nowrap;
   font-size: auto;
+  background-color:#F7DCC3;
+  /* border-top: solid 3px #658CBF; */
+  border-bottom: double 3px #658CBF;
+  border-right: dashed 1px #658CBF;
 }
 
 .travel-history a{
-  color: #FAFAFA;
+  color: black;
   text-decoration: none;
 }
 
@@ -166,8 +186,8 @@ html { height: 100vh; }
 .select-travel-title {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: rebeccapurple;
-  color: #FAFAFA;
+  /* background-color: rebeccapurple; */
+  color: black;
   padding: 10px 8px;
   /* flex-direction: column; */
   display: flex;
@@ -176,8 +196,8 @@ html { height: 100vh; }
 .travel-name-title {
   width: 43vw;
   height: calc((100vh - 100px)/15);
-  background-color: rebeccapurple;
-  color: #FAFAFA;
+  /* background-color: rebeccapurple; */
+  color: black;
   padding: 10 0px;
   flex-direction: column;
   font-weight: bold;
@@ -186,8 +206,8 @@ html { height: 100vh; }
 .detail-link-title {
   width: 5vw;
   height: calc((100vh - 100px)/15);
-  background-color: rebeccapurple;
-  color: #FAFAFA;
+  /* background-color: rebeccapurple; */
+  color: black;
   /* padding: 10px; */
   flex-direction: column;
   font-weight: bold;
@@ -198,8 +218,8 @@ html { height: 100vh; }
   left: 5px;
   height: calc((100vh - 200px)/2);
   width: 45vw;
-  background-color: rebeccapurple;
-  color: #FAFAFA;
+  /* background-color: rebeccapurple; */
+  color: black;
   flex-direction: column;
   padding: 10px;
 }
@@ -209,8 +229,8 @@ html { height: 100vh; }
   right:  5px; 
   height: calc((100vh - 200px)/2); 
   width: 5vw;
-  background-color: rebeccapurple;
-  color: #FAFAFA;
+  /* background-color: rebeccapurple; */
+  color: black;
   flex-direction: column;
   padding: 10px;
 }
@@ -219,15 +239,18 @@ html { height: 100vh; }
 .select-trip-chart {
   width: 50vw;
   height: calc((100vh - 100px)/2);
-  background-color: blue;
+  background-color:#F7DCC3;
   padding:10px 0;
   flex-direction: column;
+  background-color:#F7DCC3;
+  /* border-top: solid 3px #658CBF; */
+  border-bottom: double 3px #658CBF;
 }
 .select-result-title {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -236,8 +259,8 @@ html { height: 100vh; }
 .nickname-title {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
   font-weight: bold;
@@ -246,8 +269,8 @@ html { height: 100vh; }
 .money-title {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
   font-weight: bold;
@@ -256,8 +279,8 @@ html { height: 100vh; }
 .times-title {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
   font-weight: bold;
@@ -266,8 +289,8 @@ html { height: 100vh; }
 .select-trip-result1 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -276,8 +299,8 @@ html { height: 100vh; }
 .nickname1 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -285,8 +308,8 @@ html { height: 100vh; }
 .money1 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -294,8 +317,8 @@ html { height: 100vh; }
 .times1 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -303,8 +326,8 @@ html { height: 100vh; }
 .select-trip-result2 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -313,8 +336,8 @@ html { height: 100vh; }
 .nickname2 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -322,8 +345,8 @@ html { height: 100vh; }
 .money2 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -331,8 +354,8 @@ html { height: 100vh; }
 .times2 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -340,8 +363,8 @@ html { height: 100vh; }
 .select-trip-result3 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -350,8 +373,8 @@ html { height: 100vh; }
 .nickname3 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -359,8 +382,8 @@ html { height: 100vh; }
 .money3 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -368,8 +391,8 @@ html { height: 100vh; }
 .times3 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -377,8 +400,8 @@ html { height: 100vh; }
 .select-trip-result4 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -387,8 +410,8 @@ html { height: 100vh; }
 .nickname4 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -396,8 +419,8 @@ html { height: 100vh; }
 .money4 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -405,8 +428,8 @@ html { height: 100vh; }
 .times4 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: blue;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -416,7 +439,7 @@ html { height: 100vh; }
 .select-trip-chart-left {
   width: calc(50vw/2);
   height: calc((100vh - 100px)/5);
-  background-color: blue;
+  background-color:#F7DCC3;
   padding: 10px;
 
 }
@@ -424,15 +447,15 @@ html { height: 100vh; }
 .select-trip-chart-right {
   width: calc(50vw/2);
   height: calc((100vh - 100px)/2);
-  background-color: blue;
+  background-color:#F7DCC3;
   padding: 10px;
-  color: #FAFAFA;
+  color: black;
   font-size: 10px;
 }
 
 .select-trip-chart a{
   font-size: 16px;
-  color: #FAFAFA;
+  color: black;
   text-decoration: none;
 }
 
@@ -444,8 +467,10 @@ html { height: 100vh; }
 .select-belong-group {
   width: 50vw;
   height: calc((100vh - 100px)/2);
-  background-color: brown;
+  background-color:#F7DCC3;
   padding: 10px 0;
+  border-bottom: double 3px #658CBF;
+  border-right: dashed 1px #658CBF;
 }
 
 .select-belong-group a{
@@ -459,8 +484,8 @@ html { height: 100vh; }
   left: 5px;
   height: calc((100vh - 200px)/2);
   width: 45vw;
-  background-color: brown;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   flex-direction: column;
   padding: 10px;
   overflow:auto;
@@ -468,28 +493,29 @@ html { height: 100vh; }
 
 .group-name-list {
   font-size: 16px;
-  color: #FAFAFA;
+  color: black;
   text-decoration: none;
 }
 
 .total-trip-chart {
   width: 50vw;
   height: calc((100vh - 100px)/2);
-  background-color: green;
+  background-color:#F7DCC3;
   padding: 10px 0;
+  border-bottom: double 3px #658CBF;
 }
 
 .total-trip-chart a{
   font-size: 16px;
-  color: #FAFAFA;
+  color: black;
   text-decoration: none;
 }
 
 .select-gr-title {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -498,8 +524,8 @@ html { height: 100vh; }
 .nickname-gr-title {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
   font-weight: bold;
@@ -508,8 +534,8 @@ html { height: 100vh; }
 .money-gr-title {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
   font-weight: bold;
@@ -518,8 +544,8 @@ html { height: 100vh; }
 .times-gr-title {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
   font-weight: bold;
@@ -528,8 +554,8 @@ html { height: 100vh; }
 .select-gr-result1 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -538,8 +564,8 @@ html { height: 100vh; }
 .gr-nickname1 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -547,8 +573,8 @@ html { height: 100vh; }
 .gr-money1 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -556,8 +582,8 @@ html { height: 100vh; }
 .gr-times1 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -565,8 +591,8 @@ html { height: 100vh; }
 .select-gr-result2 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -575,8 +601,8 @@ html { height: 100vh; }
 .gr-nickname2 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -584,8 +610,8 @@ html { height: 100vh; }
 .gr-money2 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -593,8 +619,8 @@ html { height: 100vh; }
 .gr-times2 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -602,8 +628,8 @@ html { height: 100vh; }
 .select-gr-result3 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -612,8 +638,8 @@ html { height: 100vh; }
 .gr-nickname3 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -621,8 +647,8 @@ html { height: 100vh; }
 .gr-money3 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -630,8 +656,8 @@ html { height: 100vh; }
 .gr-times3 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -639,8 +665,8 @@ html { height: 100vh; }
 .select-gr-result4 {
   width: 50vw;
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   /* flex-direction: column; */
   display: flex;
@@ -649,8 +675,8 @@ html { height: 100vh; }
 .gr-nickname4 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -658,8 +684,8 @@ html { height: 100vh; }
 .gr-money4 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
@@ -667,8 +693,8 @@ html { height: 100vh; }
 .gr-times4 {
   width: calc(50vw/3);
   height: calc((100vh - 100px)/15);
-  background-color: green;
-  color: #FAFAFA;
+  background-color:#F7DCC3;
+  color: black;
   padding: 10px;
   flex-direction: column;
 }
