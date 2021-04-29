@@ -1,33 +1,34 @@
 .menu-bar {
-  width:100vw;
-  height: 100px;
+  width:100%;
+  height: 20%;
+  position: relative;
 }
 
 .menu-bar-flex{
   display: flex;
 }
 
-.group-name {
-  width: 200px;
-  height: 100px;
+.top-page-title {
+  position: absolute;
+  left:0%;
+  width: 20%;
+  height: 100%;
   background-color:yellowgreen;
-  padding: 10px;
+  padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-.group-name a{
-  font-size: 16px;
-  color: #FAFAFA;
-  text-decoration: none;
-}
-
-.button {
-  width: 500px;
+.menu-button {
+  position: absolute;
+  left:20%;
+  width: 60%;
   height: 100px;
   background-color:aqua;
   padding: 10px;
+  
 }
 
 .button a{
@@ -39,7 +40,9 @@
 }
 
 .user-management {
-  width: calc(100vw - 200px - 500px);
+  position: absolute;
+  left:80%;
+  width: 20%;
   height: 100px;
   background-color:orange;
   color: #FAFAFA;
