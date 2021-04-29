@@ -96,24 +96,56 @@
   display: flex;
 }
 
-.trip-history {
+.travel-history {
   /* position: absolute; */
   position: relative;
   width: 50vw;
   height: calc((100vh - 100px)/2);
   background-color: rebeccapurple;
-  padding: 10px;
+  padding: 10px 0;
   overflow-y:scroll;
   white-space: nowrap;
   font-size: auto;
 }
 
-.trip-history a{
+.travel-history a{
   color: #FAFAFA;
   text-decoration: none;
 }
 
-.trip-lists {
+
+
+.select-travel-title {
+  width: 50vw;
+  height: calc((100vh - 100px)/15);
+  background-color: rebeccapurple;
+  color: #FAFAFA;
+  padding: 10px 8px;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.travel-name-title {
+  width: 43vw;
+  height: calc((100vh - 100px)/15);
+  background-color: rebeccapurple;
+  color: #FAFAFA;
+  padding: 10 0px;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.detail-link-title {
+  width: 5vw;
+  height: calc((100vh - 100px)/15);
+  background-color: rebeccapurple;
+  color: #FAFAFA;
+  /* padding: 10px; */
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.travel-lists {
   position: absolute;
   left: 5px;
   height: calc((100vh - 200px)/2);
@@ -121,16 +153,6 @@
   background-color: rebeccapurple;
   color: #FAFAFA;
   flex-direction: column;
-}
-
-.select-trip-title {
-  width: 50vw;
-  height: calc((100vh - 100px)/15);
-  background-color: rebeccapurple;
-  color: #FAFAFA;
-  padding: 10px;
-  /* flex-direction: column; */
-  display: flex;
 }
 
 .detail-lists {
@@ -142,6 +164,7 @@
   color: #FAFAFA;
   flex-direction: column;
 }
+
 
 .select-trip-chart {
   width: 50vw;

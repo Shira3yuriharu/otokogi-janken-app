@@ -1,15 +1,15 @@
 <div class = main-top>
-  <div class="trip-history">
+  <div class="travel-history">
     <a href="#">■ユーザーが参加した男気旅行一覧</a>
-      <div class="select-trip-title">
-        <div class="trip-name-title">
+      <div class="select-travel-title">
+        <div class="travel-name-title">
           <a href="#">旅行名称</a>
         </div>
         <div class="detail-link-title">
-          <a href="#">旅行詳細リンク</a>
+          <a href="#">リンク</a>
         </div>
       </div>
-    <div class="trip-lists">
+    <div class="travel-lists">
       <% current_user.groups.each do |group| %>
         <% group.travels.each do |travel| %>
           <div class="travel" data-id=<%= travel.id %>>
