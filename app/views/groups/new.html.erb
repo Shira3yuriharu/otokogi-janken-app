@@ -1,5 +1,5 @@
 <div class='new-group-form'>
-  <h1>男気グループ新規作成</h1>
+  <h1>男気ジャンケングループ新規作成</h1>
   <h3 class='attention'>【必須】は必ず入力または選択ください</h3>
   <%=form_with model: @group, local: true do |f|%>
   <%= render 'devise/shared/error_messages', model: f.object %>
@@ -17,7 +17,7 @@
       <div class='new-group-form__field--left'>
         <label class='new-group-form__label' for='chat_room_チャットメンバー'>【必須】グループメンバー</label>
       </div>
-      <h3 class='attention2'>※1人目のユーザーは貴方になります</h3>
+      <h3 class='attention2'>※1人目のユーザーとして貴方が登録されます</h3>
       <h3 class='attention2'>※3人目以降のユーザー選択は任意です</h3>
       <div class='new-group-form__field--right'>
         <select name="group[user_ids][]">

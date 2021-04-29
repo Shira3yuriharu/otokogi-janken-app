@@ -1,14 +1,14 @@
 <div class = main-top>
   <div class="travel-history">
     <a href="#">■ユーザーが参加した男気旅行一覧</a>
-      <div class="select-travel-title">
-        <div class="travel-name-title">
-          <a href="#">旅行名称</a>
-        </div>
-        <div class="detail-link-title">
-          <a href="#">リンク</a>
-        </div>
-      </div>
+      <%# <div class="select-travel-title"> %>
+        <%# <div class="travel-name-title"> %>
+          <%# <a href="#">旅行名称</a> %>
+        <%# </div> %>
+        <%# <div class="detail-link-title"> %>
+          <%# <a href="#">リンク</a> %>
+        <%# </div> %>
+      <%# </div> %>
     <div class="travel-lists">
       <% current_user.groups.each do |group| %>
         <% group.travels.each do |travel| %>
@@ -72,13 +72,15 @@
 <div class = main-under>
   <div class="select-belong-group">
     <a href="#">■所属している男気グループ一覧</a>
-    <% current_user.groups.each do |group| %>
-      <div class="group" data-id=<%= group.id %>>
-        <div class="group-name-list">
-          <a href="#"><%= group.name %></a>
+    <div class="group-lists">
+      <% current_user.groups.each do |group| %>
+        <div class="group" data-id=<%= group.id %>>
+          <div class="group-name-list">
+            <a href="#"><%= group.name %></a>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
   <div class="total-trip-chart">
     <a href="#">■選択された男気グループの累積結果</a>
