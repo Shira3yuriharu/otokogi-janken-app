@@ -9,16 +9,15 @@
 }
 
 .top-page-title {
-  position: absolute;
   left:0%;
   width: 20%;
-  height: 100%;
+  height: 100px;
   background-color:yellowgreen;
   padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: absolute;
 }
 
 .menu-button {
@@ -27,15 +26,15 @@
   width: 60%;
   height: 100px;
   background-color:aqua;
-  padding: 10px;
-  
+  padding: 1%;
 }
 
-.button a{
+.menu-button a{
   display: flex;
   font-size: 9px;
   color: black;
-  text-decoration: none;
+  /* text-decoration: none; */
+
   align-items: flex-end;
 }
 
@@ -45,15 +44,38 @@
   width: 20%;
   height: 100px;
   background-color:orange;
-  color: #FAFAFA;
-  padding: 10px;
+  color: black;
+  padding: 1%;
 }
 
-.user-name{
+.user-management a{
   display: flex;
-  font-size: 12px;
-  text-decoration: none;
+  color: black;
+  /* text-decoration: none; */
   align-items: flex-end;
+}
+
+.user-nickname{
+  font-size: 15px;
+  margin: 3px 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.user-edit{
+  font-size: 12px;
+}
+
+.user-logout{
+  font-size: 12px;
+}
+
+.user-login{
+  font-size: 12px;
+}
+
+.user-sign-up{
+  font-size: 12px;
 }
 
 .travel-name{
@@ -64,8 +86,10 @@
 }
 
 .main{
+  position: relative;
+  top:100px;
   width:100vw;
-  height: calc(100vh - 100px);
+  height: 80%;
 }
 
 .main-top{
@@ -73,15 +97,18 @@
 }
 
 .trip-history {
+  /* position: absolute; */
   position: relative;
   width: 50vw;
   height: calc((100vh - 100px)/2);
   background-color: rebeccapurple;
   padding: 10px;
+  overflow-y:scroll;
+  white-space: nowrap;
+  font-size: auto;
 }
 
 .trip-history a{
-  font-size: 16px;
   color: #FAFAFA;
   text-decoration: none;
 }
@@ -90,17 +117,27 @@
   position: absolute;
   left: 5px;
   height: calc((100vh - 200px)/2);
-  width: calc(50vw/2);
+  width: 45vw;
   background-color: rebeccapurple;
   color: #FAFAFA;
   flex-direction: column;
+}
+
+.select-trip-title {
+  width: 50vw;
+  height: calc((100vh - 100px)/15);
+  background-color: rebeccapurple;
+  color: #FAFAFA;
+  padding: 10px;
+  /* flex-direction: column; */
+  display: flex;
 }
 
 .detail-lists {
   position: absolute;
   right:  5px; 
   height: calc((100vh - 200px)/2); 
-  width: calc(50vw/2);
+  width: 5vw;
   background-color: rebeccapurple;
   color: #FAFAFA;
   flex-direction: column;
@@ -113,7 +150,7 @@
   padding: 10px;
   flex-direction: column;
 }
-.select-trip-title {
+.select-result-title {
   width: 50vw;
   height: calc((100vh - 100px)/15);
   background-color: blue;
