@@ -5,7 +5,7 @@ class ResultsController < ApplicationController
       @user = User.find(current_user.id)
       @travel_select_last = TravelSelect.where(user_id: @user).last
       if @travel_select_last.nil?
-        @travel_name = "男気グループ未登録の為、表示できません"
+        @travel_name = "環境構築③を実行ください"
       else
         @travel_select_last_travel_id = @travel_select_last.travel_id
         @travel_name = Travel.find(@travel_select_last_travel_id).name
@@ -58,6 +58,8 @@ class ResultsController < ApplicationController
       @travel_select_last_travel_id = @travel_select_last.travel_id
       @group_id = Travel.where(id: @travel_select_last_travel_id).select('group_id')
       @user_ids = GroupUser.where(group_id: @group_id).select('user_id')
+
+      @travel_name = Travel.find(@travel_select_last_travel_id).name
     end
 
   end

@@ -20,7 +20,8 @@
   <div class="user-management">
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐する%>
       <% if user_signed_in? %>
-        <%= link_to current_user.nickname, "#", class: "user-nickname" %>
+        <div class="user-management-variable">ユーザー名：<%= current_user.nickname %></div>
+        <div class="user-management-variable">ジャンケン結果を記録する旅行名：<%= @travel_name %></div>
         <%= link_to '■ユーザー情報編集', edit_user_path(current_user), class: "user-edit" %>
         <%= link_to '■ログアウト', destroy_user_session_path, method: :delete, class: "user-logout" %>
       <% else %>
