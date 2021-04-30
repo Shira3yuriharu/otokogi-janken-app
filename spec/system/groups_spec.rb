@@ -22,7 +22,7 @@ RSpec.describe "男気グループ作成", type: :system do
       # グループ作成ページに移動する
       visit new_group_path
       # グループ名を入力する
-      fill_in '【必須】グループ名', with: @group_name
+      fill_in 'group_name', with: @group_name
       # グループメンバーを選択する
       <select name="japanese_calendar" id="japanese_calendar">
         <option value="0">明治</option>

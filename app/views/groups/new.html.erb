@@ -20,19 +20,19 @@
 
       <div class='new-group-form__field--right'>
         <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
-        <select name="group[user_ids][]">
+        <select name="group[user_ids][]" id="select_box1">
           <option value="">グループに加える2人目のユーザーを選択ください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.nickname %></option>
           <% end %>
         </select>  
-        <select name="group[user_ids][]">
+        <select name="group[user_ids][]" id="select_box2">
           <option value="">グループに加える3人目のユーザーを選択ください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.nickname %></option>
           <% end %>
         </select>  
-        <select name="group[user_ids][]">
+        <select name="group[user_ids][]" id="select_box3">
           <option value="">グループに加える4人目のユーザーを選択ください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.nickname %></option>
