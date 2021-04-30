@@ -24,24 +24,30 @@ RSpec.describe "男気グループ作成", type: :system do
       # グループ名を入力する
       fill_in 'group_name', with: @group_name
       # グループメンバーを選択する
-      <select name="japanese_calendar" id="japanese_calendar">
-        <option value="0">明治</option>
-        <option value="1">大正</option>
-        <option value="2">昭和</option>
-        <option value="3">平成</option>
-      </select>
-      # 送信するとTweetモデルのカウントが1上がることを確認する
-      # 投稿完了ページに遷移することを確認する
-      # 「投稿が完了しました」の文字があることを確認する
-      # トップページに遷移する
-      # トップページには先ほど投稿した内容のツイートが存在することを確認する（画像）
-      # トップページには先ほど投稿した内容のツイートが存在することを確認する（テキスト）
+      select @user2.nickname, from: 'select_box1'
+      select @user3.nickname, from: 'select_box2'
+      select @user4.nickname, from: 'select_box3'
+      # Create Groupボタンを押すとGroupモデルのカウントが1上がることを確認する
+      expect{
+        find('input[name="commit"]').click
+      }.to change { Group.count }.by(1)
+      # トップページに遷移することを確認する
+      expect(current_path).to eq(root_path)
+      # ログアウトボタンが表示されていることを確認する
+      expect(page).to have_content('■ログアウト')
+      # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
+      expect(page).to have_no_content('■ログイン')
+      expect(page).to have_no_content('■新規登録')
+      # トップページには先ほど登録したグループ名が存在することを確認する（テキスト）
+      expect(page).to have_content(@group_name)
     end
   end
+
   context 'ツイート投稿ができないとき'do
     it 'ログインしていないと新規投稿ページに遷移できない' do
       # トップページに遷移する
       # 新規投稿ページへのリンクがない
     end
   end
+  
 end
