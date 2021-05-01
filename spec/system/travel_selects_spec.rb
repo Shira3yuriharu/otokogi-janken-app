@@ -73,7 +73,7 @@ RSpec.describe "ジャンケン結果を記録する旅行選択実施", type: :
       expect(page).to have_no_content('■ログイン')
       expect(page).to have_no_content('■新規登録')
       # トップページに先ほど登録した旅行名が存在することを確認する（テキスト）
-      expect(page).to have_content(@travel_name)
+      expect(find_by_id('travel_select')).to have_content(@travel_name)
     end
   end
 
