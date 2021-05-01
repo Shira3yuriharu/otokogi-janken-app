@@ -185,7 +185,7 @@ RSpec.describe "ジャンケン結果を記録する旅行選択実施", type: :
       # 旅行選択ページに移動する
       visit new_travel_select_path
       # 旅行名を選択しない
-      # 登録するボタンを押すとモデルのカウントが1上がることを確認する
+      # 登録するボタンを押すとモデルのカウントが上がらないことを確認する
       expect{
         find('input[name="commit"]').click
       }.to change { TravelSelect.count }.by(0)
