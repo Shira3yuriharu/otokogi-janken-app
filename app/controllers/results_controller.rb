@@ -104,9 +104,11 @@ class ResultsController < ApplicationController
     @travel = TravelSelect.where(id: @result.travel_select_id).last
     @travel_select_last_id = @travel.id
 
-    result.update(result_params)
-    # binding.pry
-    redirect_to root_path
+    if result.update(result_params)
+      redirect_to root_path
+    else
+      redirect_to edit_result_path
+    end
   end
 
   private
