@@ -9,7 +9,7 @@ RSpec.describe "男気グループ作成", type: :system do
     @group_name = Faker::Company.name
   end
   context '男気グループ作成ができるとき'do
-    it 'ログインしたユーザーは男気グループ作成ができる' do
+    it 'ログインしたユーザーはグループメンバーを本人以外3人選択した場合、男気グループ作成ができる' do
       # ログインする
       visit root_path
       fill_in 'Email', with: @user1.email
@@ -38,7 +38,7 @@ RSpec.describe "男気グループ作成", type: :system do
       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログイン')
       expect(page).to have_no_content('■新規登録')
-      # トップページには先ほど登録したグループ名が存在することを確認する（テキスト）
+      # トップページに先ほど登録したグループ名が存在することを確認する（テキスト）
       expect(page).to have_content(@group_name)
     end
     it 'ログインしたユーザーはグループメンバーを本人以外選択しなくても男気グループ作成ができる' do
@@ -67,7 +67,7 @@ RSpec.describe "男気グループ作成", type: :system do
       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログイン')
       expect(page).to have_no_content('■新規登録')
-      # トップページには先ほど登録したグループ名が存在することを確認する（テキスト）
+      # トップページに先ほど登録したグループ名が存在することを確認する（テキスト）
       expect(page).to have_content(@group_name)
     end
     it 'ログインしたユーザーはグループメンバーを本人以外１人だけ選択した場合でも男気グループ作成ができる' do
@@ -97,7 +97,7 @@ RSpec.describe "男気グループ作成", type: :system do
       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログイン')
       expect(page).to have_no_content('■新規登録')
-      # トップページには先ほど登録したグループ名が存在することを確認する（テキスト）
+      # トップページに先ほど登録したグループ名が存在することを確認する（テキスト）
       expect(page).to have_content(@group_name)
     end
     it 'ログインしたユーザーはグループメンバーを本人以外2人だけ選択した場合でも男気グループ作成ができる' do
@@ -128,7 +128,7 @@ RSpec.describe "男気グループ作成", type: :system do
       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログイン')
       expect(page).to have_no_content('■新規登録')
-      # トップページには先ほど登録したグループ名が存在することを確認する（テキスト）
+      # トップページに先ほど登録したグループ名が存在することを確認する（テキスト）
       expect(page).to have_content(@group_name)
     end
   end
@@ -164,7 +164,7 @@ RSpec.describe "男気グループ作成", type: :system do
       }.to change { Group.count }.by(0)
       # グループ作成ページに留まることを確認する
       expect(current_path).to eq(groups_path)
-      # Create Groupボタンが表示されていることを確認する
+      # 【必須】グループ名が表示されていることを確認する
       expect(page).to have_content('【必須】グループ名')
       # トップページに存在するログアウトボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログアウト')
