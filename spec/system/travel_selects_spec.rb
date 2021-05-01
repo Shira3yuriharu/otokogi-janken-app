@@ -77,4 +77,12 @@ RSpec.describe "ジャンケン結果を記録する旅行選択実施", type: :
     end
   end
 
+  context 'ジャンケン結果を記録する旅行選択ができないとき'do
+  it 'ログインしていないとジャンケン結果を記録する旅行選択ができない' do
+    # トップページに遷移する
+    visit root_path
+    # グループ作成ページへのリンクがないことを確認する
+    expect(page).to have_no_content('③ジャンケン結果を記録する旅行選択')
+  end
+
 end

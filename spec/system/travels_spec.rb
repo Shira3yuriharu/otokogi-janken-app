@@ -65,6 +65,7 @@ RSpec.describe "男気旅行作成", type: :system do
     end
   end
 
+
   context 'グループ作成ができないとき'do
     it 'ログインしていないと男気グループ作成ができない' do
       # トップページに遷移する
@@ -72,6 +73,26 @@ RSpec.describe "男気旅行作成", type: :system do
       # グループ作成ページへのリンクがない
       expect(page).to have_no_content('②旅行計画作成')
     end
+
+    it 'ログインはしたが、グループを作成しないとユーザーは男気旅行作成ができず、グループ作成ページにリダイレクトすることを確認する' do
+      # ログインする
+      visit root_path
+      fill_in 'Email', with: @user1.email
+      fill_in 'Password', with: @user1.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq(root_path)
+      expect(page).to have_content('■ログアウト')
+      # 旅行計画作成ページへのリンクがあることを確認する
+      expect(page).to have_content('②旅行計画作成')
+      # 旅行計画作成ページに移動する
+      visit new_travel_path
+      # 旅行計画作成ページに存在すべきテキストがないことを確認する
+      expect(page).to have_no_content('【必須】旅行名')
+      # グループ作成ページに存在するテキストがあることを確認する
+      expect(page).to have_content('【必須】グループ')
+    end
+
+
     it 'ログイン及び男気グループを作成したが、旅行名を入力しないとユーザーは男気旅行作成ができない' do
       # ログインする
       visit root_path
