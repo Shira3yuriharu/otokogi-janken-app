@@ -13,7 +13,7 @@
       <% current_user.groups.each do |group| %>
         <% group.travels.each do |travel| %>
           <div class="travel" data-id=<%= travel.id %>>
-            <div class="travel-name-list">
+            <div id="travel-name-id" class="travel-name-list">
               <a href="#"><%= travel.name %></a>
               <a href="#">(<%= group.name %>)</a>
             </div>
@@ -25,7 +25,7 @@
       <% current_user.groups.each do |group| %>
         <% group.travels.each do |travel| %>
           <div class="detail">
-            <div class="travel-detail">
+            <div id="travel-detail-id" class="travel-detail">
               <%= link_to '詳細', travel_path(travel.id), method: :get %>
             </div>
           </div>

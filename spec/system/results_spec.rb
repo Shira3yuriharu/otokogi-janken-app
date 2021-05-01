@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "ジャンケン結果を記録する旅行選択実施", type: :system do
+RSpec.describe "ジャンケン結果を記録する", type: :system do
   before do
     @user1 = FactoryBot.create(:user)
     @user2 = FactoryBot.create(:user)
@@ -8,9 +8,13 @@ RSpec.describe "ジャンケン結果を記録する旅行選択実施", type: :
     @user4 = FactoryBot.create(:user)
     @group_name = Faker::Company.name
     @travel_name = Gimei.town.kanji
+    @money = Faker::Number.number(digits: 4)
+    @item_category = "食べ物"
+    @note = Faker::Food.dish
+    @image = Rails.root.join('/Users/shira3/Downloads/イラスト屋/pan_kame.png')
   end
 
-  context 'ジャンケン結果を記録する旅行選択ができるとき'do
+  context 'ジャンケン結果を記録できるとき'do
     it 'ログイン、男気グループ作成、旅行計画作成を正常に行えたユーザーは旅行選択ができる' do
       # ログインする
       visit root_path
@@ -66,14 +70,38 @@ RSpec.describe "ジャンケン結果を記録する旅行選択実施", type: :
       # 登録するボタンを押すとモデルのカウントが1上がることを確認する
       expect{
         find('input[name="commit"]').click
-      }.to change { Travel.count }.by(1)
+      }.to change { TravelSelect.count }.by(1)
+      # トップページに遷移することを確認する
+      expect(current_path).to eq(root_path)
+      # ジャンケン結果を記録する旅行選択ページへのリンクがあることを確認する
+      expect(page).to have_content('■ジャンケン結果記録')
+      # ジャンケン結果記録ページに移動する
+      visit new_result_path
+      # 男気がある人を選択する
+      select @user1.nickname, from: 'result_nickname'
+      # 金額を入力する
+      fill_in 'result_money', with: @money
+      # 品目を選択する
+      select @item_category, from: 'result_item_category_id'
+      # 備考を入力する
+      fill_in 'result_note', with: @note
+      # 画像を添付する
+      attach_file('result_image', @image, make_visible: true)
+      # 登録するボタンを押すとResultモデルのカウントが1上がることを確認する
+      expect{
+        find('input[name="commit"]').click
+      }.to change { Result.count }.by(1)
+      # トップページに遷移することを確認する
+      expect(current_path).to eq(root_path)
       # ログアウトボタンが表示されていることを確認する
       expect(page).to have_content('■ログアウト')
       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログイン')
       expect(page).to have_no_content('■新規登録')
-      # トップページに先ほど登録した旅行名が存在することを確認する（テキスト）
-      expect(page).to have_content(@travel_name)
+      # 男気ジャンケンの結果を確認する為、選択した旅行名をクリックする
+      click_link '詳細'
+      # 登録した金額が表示されることを確認する
+      expect(page).to have_content(@money)
     end
   end
 
