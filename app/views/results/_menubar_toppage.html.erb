@@ -1,23 +1,33 @@
 <div class="menu-bar-flex">
-  <div class="group-name">
-    <a href="#">男気ジャンケン記録APP</a>
+  <div class="top-page-title">
+    <p>男気ジャンケン記録APP</p>
   </div>
-  <div class="button">
-    <%= link_to "■グループ作成", new_group_path %>
-    <%= link_to "■旅行計画作成", new_travel_path %>
-    <%= link_to "■ジャンケンを記録する旅行選択", new_travel_select_path %>
+  <div class="menu-button1">
+    <p class="top-page-index">STEP1 環境構築</p>
+    <p class="top-page-index-complement">※初めての方は下記順で実行ください</p>
+    <%= link_to "①グループ作成", new_group_path %>
+    <%= link_to "②旅行計画作成", new_travel_path %>
+    <%= link_to "③ジャンケン結果を記録する旅行選択", new_travel_select_path %>
+  </div>
+  <div class="menu-button2">
+    <p class="top-page-index">STEP2 メイン機能</p>  
     <%= link_to "■ジャンケン結果記録", new_result_path %>
+  </div>
+  <div class="menu-button3">
+    <p class="top-page-index">STEP3 便利機能</p>
     <a href="#">■男気スポット紹介</a>
   </div>
   <div class="user-management">
-    <div class="user-name">
-      <a href="#">ユーザー名称:</a>
-      <%= link_to current_user.nickname, edit_user_path(current_user) %>
-    </div>
-    <div class="travel-name">
-      <a href="#">男気ジャンケンを記録する旅行名称:</a>
-      <%= @travel_name %>
-    </div>
+      <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐する%>
+      <% if user_signed_in? %>
+        <div class="user-management-variable">ユーザー名：<%= current_user.nickname %></div>
+        <div id="travel_select" class="user-management-variable">ジャンケン結果を記録する旅行名：<%= @travel_name %></div>
+        <%= link_to '■ユーザー情報編集', edit_user_path(current_user), class: "user-edit" %>
+        <%= link_to '■ログアウト', destroy_user_session_path, method: :delete, class: "user-logout" %>
+      <% else %>
+        <%= link_to '■ログイン', new_user_session_path, class: "user-login" %>
+        <%= link_to '■新規登録', new_user_registration_path, class: "user-sign-up" %>
+      <% end %>
+      <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐する%>
   </div>
-
 </div>

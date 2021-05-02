@@ -1,9 +1,8 @@
 <div class='result-input-form'>
  
-  <h1>男気ジャンケン記録ページ</h1>
-  <div class="travel-name-variable">対象旅行名：<%= @travel_name %></div>
-  <h3 class='attention'>【必須】は必ず入力ください</h3>
+  <h1>男気ジャンケン編集ページ</h1>
   <%=form_with model: @result, local: true do |f|%>
+
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
     <%= render 'devise/shared/error_messages', model: f.object %>
 
@@ -56,7 +55,7 @@
       <div class='result-input-form__field--left'>
       </div>
       <div class='result-input-form__field--right'>
-        <%= f.submit "登録する" %>
+        <%= f.submit "更新" %>
       </div>
     </div>
 

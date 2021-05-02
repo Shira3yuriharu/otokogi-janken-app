@@ -43,7 +43,7 @@ function check() {
       // Ajaxに必要なオブジェクトを生成している
       const XHR = new XMLHttpRequest();
       // openでリクエストを初期化する
-      XHR.open("GET", `/results/${travelId}`, true);
+      XHR.open("GET", `/results/checked/${travelId}`, true);
       // レスポンスのタイプを指定する
       XHR.responseType = "json";
       // sendでリクエストを送信する
@@ -134,9 +134,7 @@ function check() {
              }
         }
 
-
-
-        // console.log (uniqueArray)
+   
         // console.log (travel_select_pie[0]["nickname"])
         // console.log (travel_select_pie)
         // console.log (i3)
