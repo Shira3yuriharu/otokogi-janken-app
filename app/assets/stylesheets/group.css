@@ -1,4 +1,7 @@
 /* リセットCSS */
+body {
+  margin: 0 auto;
+}
 h3,h4,h5,h6,p {
   padding: 0 0;
   margin: 0;
