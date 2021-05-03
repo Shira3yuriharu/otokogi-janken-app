@@ -1,6 +1,6 @@
 <div class='result-input-form'>
  
-  <h1>男気ジャンケン記録ページ</h1>
+  <h1>男気ジャンケン 結果記録</h1>
   <div class="travel-name-variable">対象旅行名：<%= @travel_name %></div>
   <h3 class='attention'>【必須】は必ず入力ください</h3>
   <%=form_with model: @result, local: true do |f|%>
@@ -9,7 +9,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :【必須】男気がある人を選択, class: 'result-input-form__label'%>
+        <%= f.label :【必須】男気を魅せた人, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.collection_select(:nickname, User.where(id: @user_ids).select('nickname'), :nickname, :nickname, {include_blank: "----"}) %>
