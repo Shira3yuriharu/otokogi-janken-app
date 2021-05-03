@@ -26,6 +26,7 @@
       <th>品目</th>
       <th>金額</th>
       <th>備考</th>
+      <th>写真</th>
       <th>編集リンク</th>
       <th>削除実行</th>
     </tr>
@@ -37,8 +38,9 @@
       <td><%= result.nickname %></td>
       <td><%= result.updated_at.strftime("%Y-%m-%d %H:%M") %></td>
       <td><%= ItemCategory.data.find{ |s| s[:id] == result.item_category_id }[:name] %></td>
-      <td><%= result.money %></td>
+      <td><%= result.money.to_s(:delimited) %></td>
       <td><%= result.note %></td>
+      <td><%= image_tag result.image, class: "result-image" if result.image.attached? %></td>
       <td><%= link_to "編集", edit_result_path(result.id), method: :get %></td>
       <td><%= link_to "削除", result_path(result.id), method: :delete %></td>
     </tr>
@@ -49,16 +51,16 @@
   </div>
 </div>
 
-<div class='container'>
+<%# <div class='container'>
 <h2>■投稿画像一覧</h2>
 <div class='result-image-content'>
   <% @results.each do |result| %>
-    <%= link_to travel_path(result.id) do %>
-      <%= image_tag result.image, class: "result-image" if result.image.attached? %>
-    <% end %>
-  <% end %>
-</div>
-</div>
+    <%# <%= link_to travel_path(result.id) do %>
+      <%# <%= image_tag result.image, class: "result-image" if result.image.attached? %>
+    <%# <% end %>
+  <%# <% end %>
+<%# </div>
+</div> %> 
 
 <div class='container'>
   <h2>■コメント投稿</h2>

@@ -96,3 +96,9 @@ select {
   width: 100%;
   margin-left:25%;
 }
+
+.error-message{
+  text-align: center;
+  color: darkgreen;
+  margin: 5vh;
+}

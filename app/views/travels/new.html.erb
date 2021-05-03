@@ -2,7 +2,7 @@
  
   <h1>男気旅行新規作成ページ</h1>
   <%=form_with model: @travel, local: true do |f|%>
-  <h3 class='attention'>【必須】は必ず入力または選択ください</h3>
+  <h4 class='attention'>【必須】は必ず入力または選択ください</h4>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
     <%= render 'devise/shared/error_messages', model: f.object %>
 
