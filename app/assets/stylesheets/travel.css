@@ -21,16 +21,9 @@
   height: 100%;
 }
 
-.result-image-content{
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-}
-
 .result-image{
-  width: 33vh;
-  height: 33vh;
+  width: 15vw;
+  height: auto;
 }
 
 .container{
@@ -112,4 +105,5 @@ tbody{
 td,th {
   text-align: center;
   padding: 1vw;
+  white-space: nowrap ;
 }
