@@ -483,7 +483,7 @@ html { height: 100vh; }
   position: absolute;
   left: 5px;
   height: calc((100vh - 200px)/2);
-  width: 45vw;
+  width: 49vw;
   background-color:#F7DCC3;
   color: black;
   flex-direction: column;
@@ -723,4 +723,18 @@ span{
   font-size: 18px;
   margin: 1%;
   text-decoration: none;
+}
+
+.travel-name-list{
+  margin: 3vh 0;
+}
+
+.travel-detail{
+  margin: 3vh 0;
+  text-decoration: underline;
+
+}
+
+.group-name-list{
+  margin: 3vh 0;
 }
