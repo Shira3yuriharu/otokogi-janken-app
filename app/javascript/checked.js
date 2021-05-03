@@ -58,25 +58,11 @@ function check() {
         }
         // レスポンスされたデータを変数travel_select_pieに代入している
         const travel_select_pie = XHR.response.post;
-        // 全てを取り出すにはFor each文を記述する。mapなど
-        // ele2.appendChild(document.createTextNode(travel_select_pie[0]["id"]));
-
-        // travel_select_pie.foreach(function(item){
-        //     console.log(item["id"]);
-        //   });
-
-
-
 
         i = travel_select_pie.length
         var nickname=[];
         for (let step = 0; step < i; step++) {
-          // ele2.appendChild(document.createTextNode(travel_select_pie[step]["nickname"]));
-          // console.log (travel_select_pie[step]["nickname"])
           nickname[step]=(travel_select_pie[step]["nickname"])
-        //   if (user1 == null) {
-        //   user1 = (travel_select_pie[step]["nickname"])
-        //  }
         }
 
         // 合計金額表示処理
@@ -111,7 +97,11 @@ function check() {
                 times = times + 1
               }
             }
-            // console.log (a)
+            // 合計金額と勝利回数にカンマ表記に変更
+            money = money.toLocaleString(); 
+            times = times.toLocaleString(); 
+
+            // HTMLへ表記
             if (step === 0){
              ele1_1.appendChild(document.createTextNode((name)));
              ele1_2.appendChild(document.createTextNode((money)));
@@ -133,15 +123,6 @@ function check() {
               ele4_3.appendChild(document.createTextNode((times)));
              }
         }
-
-   
-        // console.log (travel_select_pie[0]["nickname"])
-        // console.log (travel_select_pie)
-        // console.log (i3)
-        
-        // console.log (element[0])
-        // console.log (ele2)
-
       }
      });
   });
