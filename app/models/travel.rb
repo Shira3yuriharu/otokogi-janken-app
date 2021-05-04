@@ -3,7 +3,7 @@ class Travel < ApplicationRecord
   has_many :travel_selects
   has_many :comments
 
-  validates :name, presence: true
+  validates :name, presence: true,  length: { maximum: 15 }
   validates :start_day, presence: true
   validates :end_day, presence: true
   validates :group_id, presence: true
