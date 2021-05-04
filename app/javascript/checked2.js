@@ -96,7 +96,12 @@ function check2() {
                   times = times + 1
                 }
               }
-              // console.log (a)
+
+            // 合計金額と勝利回数にカンマ表記に変更
+              money = money.toLocaleString(); 
+              times = times.toLocaleString(); 
+              
+            // HTMLへ表記
               if (step === 0){
                ele1_1.appendChild(document.createTextNode((name)));
                ele1_2.appendChild(document.createTextNode((money)));
@@ -118,8 +123,6 @@ function check2() {
                 ele4_3.appendChild(document.createTextNode((times)));
                }
           }
-
-        // console.log (results) 
       }  
      });
   });

@@ -1,8 +1,8 @@
 <div class='new-group-form'>
-  <h1>男気ジャンケングループ新規作成</h1>
-  <h3 class='attention'>【必須】は必ず入力または選択ください</h3>
+  <h1>男気ジャンケングループ 新規作成</h1>
+  <h4 class='attention'>【必須】は必ず入力または選択ください</h4>
   <%=form_with model: @group, local: true do |f|%>
-  <%= render 'devise/shared/error_messages', model: f.object %>
+  <%# <%= render 'devise/shared/error_messages', model: f.object %> 
     <div class='new-group-form__field'>
       <div class='new-group-form__field--left'>
         <%= f.label :【必須】グループ名, class: 'new-group-form__label'%>
@@ -16,7 +16,7 @@
       <div class='new-group-form__field--left'>
         <label class='new-group-form__label' for='chat_room_チャットメンバー'>グループメンバー</label>
       </div>
-      <h3 class='attention2'>※1人目のユーザーとして貴方が登録されます</h3>
+      <h5 class='attention2'>※1人目のユーザーとして貴方が登録されます</h5>
 
       <div class='new-group-form__field--right'>
         <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
@@ -45,7 +45,7 @@
     <div class='new-group-form__field'>
       <div class='new-group-form__field--left'></div>
       <div class='new-group-form__field--right'>
-        <%= f.submit class: 'new-group-form__action-btn'%>
+        <%= f.submit  "登録する", class: 'new-group-form__action-btn'%>
       </div>
     </div>
   <% end %>
