@@ -78,6 +78,14 @@ class ResultsController < ApplicationController
     @travel = TravelSelect.where(id: @result.travel_select_id).last
     @group_id = Travel.where(id: @travel.travel_id).select('group_id')
     @user_ids = GroupUser.where(group_id: @group_id).select('user_id')
+    # 結果に紐付いているユーザー及びGrメンバー以外は編集ページへ遷移不可にする
+    result_select_id = @result.travel_select_id
+    travel_id = TravelSelect.where(id: @result.travel_select_id).select(:travel_id)
+    group_id = Travel.where(id: travel_id).select(:group_id)
+    user_ids = GroupUser.where(group_id: group_id)
+    unless user_ids.select(:user_id).where(user_id: current_user.id).exists?
+      redirect_to root_path
+    end
   end
 
   def update
