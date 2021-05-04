@@ -1,14 +1,12 @@
 .detail-page-title{
-  color:blue;
+  color:black;
 }
 
-.detail-page-travel-title{
-  display: flex;
-}
-
-.detail-page-travel-name{
+.detail-page-select-travel{
   color:black;
   font-size: large;
+  text-align: center;
+  margin: auto;
 }
 
 .detail-page-travel-period{
@@ -27,16 +25,16 @@
 }
 
 .container{
-  margin: 20px 0;
-  padding: 30px;
+  margin: auto 0;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 form input,
 form textarea {
-  width: 50%;
+  width: 60%;
   margin: auto;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
@@ -52,8 +50,8 @@ form input[type="submit"] {
 }
 
 .comments {
-  padding: 30px;
-  margin-top: 15px;
+  padding: 0 20px;
+  /* margin-top: 10px; */
   width: 100%;
   height: 150px;
 }
@@ -96,10 +94,10 @@ form input[type="submit"] {
 
 thead,
 tfoot{
-  background-color:#F5E28D;
+  background-color:#F7DCC3;
 }
 tbody{
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 td,th {

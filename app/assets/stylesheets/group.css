@@ -17,8 +17,8 @@ h1 {
 
 h2 {
   margin-bottom: 1%;
-  color: #f05050;
-  font-size: 14px;
+  color:black;
+  font-size: 17px;
 }
 
 ul {
@@ -92,6 +92,7 @@ select {
 .attention{
   color: red;
   text-align: center;
+  margin: 1vh 0;
 }
 
 .attention2{
