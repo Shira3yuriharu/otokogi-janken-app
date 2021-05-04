@@ -9,7 +9,7 @@
         <%= f.label :【必須】旅行選択, class: 'travel-select-form__label'%>
       </div>
       <div class='travel-select-form__field--right'>
-        <%= f.collection_select(:travel_id, @travels, :id, :name, {include_blank: "----"}) %>
+        <%= f.collection_select(:travel_id, @travels, :id, :name, {include_blank: "----"},{autofocus: true}) %>
       </div>
     </div>
 
