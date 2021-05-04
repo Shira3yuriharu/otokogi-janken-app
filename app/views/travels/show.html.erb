@@ -59,8 +59,8 @@
 <div class='container'>
   <h2>■コメント投稿</h2>
   <%= form_with(model: [@travel, @comment], local: true) do |form| %>
-    <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-    <%= form.submit "SEND" %>
+    <%= form.text_area :text, placeholder: "コメント記入", rows: "2" %>
+    <%= form.submit "投稿する" %>
   <% end %>
 </div>    
 <div class='comments'>
