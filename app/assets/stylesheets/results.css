@@ -24,6 +24,10 @@ html { height: 100vh; }
   border-bottom: double 3px #8C031C;
   border-right: dashed 1px #8C031C;
 }
+.title-icon {
+  width: 50%;
+  height: auto;
+}
 
 .menu-button1 {
   position: absolute;
