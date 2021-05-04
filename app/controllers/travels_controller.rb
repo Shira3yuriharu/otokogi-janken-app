@@ -40,6 +40,12 @@ class TravelsController < ApplicationController
     # コメント表示
     @comment = Comment.new
     @comments = @travel.comments.includes(:user)
+    # 旅行に紐付いているユーザー以外は詳細ページへ遷移不可にする
+    group_id = @travel.group_id
+    user_ids = GroupUser.where(group_id: group_id)
+    unless user_ids.select(:user_id).where(user_id: current_user.id).exists?
+      redirect_to root_path
+    end
   end
 
   private
