@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    nickname              {Gimei.last.katakana}
+    nickname              {Gimei.katakana[1..8]}
     email                 {Faker::Internet.free_email}
     password              {Faker::Internet.password(min_length: 6)}
     password_confirmation {password}

@@ -51,20 +51,14 @@ form input[type="submit"] {
 
 .comments {
   padding: 0 20px;
-  /* margin-top: 10px; */
   width: 100%;
   height: 150px;
 }
-
-/* .travel-registration-form{
-  text-align: center;
-} */
 
 .travel-registration-form__field{
   width: 100%;
   padding: 0.5% 10%;
 }
-
 
 .travel-registration-form__field--left{
   text-align: left;
@@ -89,7 +83,6 @@ form input[type="submit"] {
   text-align: center;
   display: flex;
   width: 100%;
-  /* padding: 0 30%; */
 }
 
 thead,

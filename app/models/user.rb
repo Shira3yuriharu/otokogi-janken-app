@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do         
-    validates :nickname,uniqueness: { case_sensitive: false }
+    validates :nickname,uniqueness: { case_sensitive: false },  length: { maximum: 8 }
     validates :email, length: { maximum: 300 }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },uniqueness: { case_sensitive: false }
   end
 

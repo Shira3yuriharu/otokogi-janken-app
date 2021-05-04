@@ -15,7 +15,6 @@ html { height: 100vh; }
   width: 20vw;
   height: 100px;
   background-color:#D9D9D9;
-  padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +22,13 @@ html { height: 100vh; }
   border-top: double 3px #8C031C;
   border-bottom: double 3px #8C031C;
   border-right: dashed 1px #8C031C;
+  font-size: 1vw;
+  font-weight: bold;
 }
 .title-icon {
   width: 50%;
   height: auto;
+  padding: 2%;
 }
 
 .menu-button1 {
@@ -34,8 +36,6 @@ html { height: 100vh; }
   left:20vw;
   width: 19vw;
   height: 100px;
-  /* background-color:aqua; */
-  /* padding: 1%; */
   background-color:#D9D9D9;
   border-top: double 3px #8C031C;
   border-bottom: double 3px #8C031C;
@@ -46,8 +46,6 @@ html { height: 100vh; }
   left:39vw;
   width: 16vw;
   height: 100px;
-  /* background-color:aqua; */
-  /* padding: 1%; */
   background-color:#D9D9D9;
   border-top: double 3px #8C031C;
   border-bottom: double 3px #8C031C;
@@ -58,8 +56,6 @@ html { height: 100vh; }
   left:55vw;
   width: 15vw;
   height: 100px;
-  /* background-color:aqua; */
-  /* padding: 1%; */
   background-color:#D9D9D9;
   border-top: double 3px #8C031C;
   border-bottom: double 3px #8C031C;
@@ -79,7 +75,6 @@ html { height: 100vh; }
   font-size: 10px;
   color:red;
   margin: 3%;
-  /* font-weight: bold; */
   align-items: flex-end;
 }
 
@@ -95,7 +90,7 @@ html { height: 100vh; }
   font-size: auto;
 }
 .top-page-index-complement{
-  font-size: 4px;
+  font-size: 1vmin;
 }
 
 .user-management {
@@ -103,9 +98,7 @@ html { height: 100vh; }
   left:70vw;
   width: 30vw;
   height: 100px;
-  /* background-color:orange; */
   color: black;
-  /* padding: 1%; */
   background-color:#D9D9D9;
   border-top: double 3px #8C031C;
   border-bottom: double 3px #8C031C;
@@ -114,11 +107,11 @@ html { height: 100vh; }
 .user-management a{
   display: flex;
   color: black;
-  /* text-decoration: none; */
   align-items: flex-end;
 }
+
 .user-management-variable{
-  font-size: 12px;
+  font-size: 1vw;
   margin: 3px 0;
   font-weight: bold;
   text-decoration: none;
@@ -166,17 +159,14 @@ html { height: 100vh; }
 }
 
 .travel-history {
-  /* position: absolute; */
   position: relative;
   width: 50vw;
   height: calc((100vh - 100px)/2);
-  /* background-color: rebeccapurple; */
   padding: 10px 0;
   overflow:auto;
   white-space: nowrap;
   font-size: auto;
   background-color:#F7DCC3;
-  /* border-top: double 3px #8C031C; */
   border-bottom: double 3px #8C031C;
   border-right: dashed 1px #8C031C;
 }
@@ -186,43 +176,11 @@ html { height: 100vh; }
   text-decoration: none;
 }
 
-
-/* .select-travel-title { */
-  /* width: 50vw; */
-  /* height: calc((100vh - 100px)/15); */
-  /* background-color: rebeccapurple; */
-  /* color: black; */
-  /* padding: 10px 8px; */
-  /* flex-direction: column; */
-  /* display: flex; */
-/* } */
-
-/* .travel-name-title { */
-  /* width: 43vw; */
-  /* height: calc((100vh - 100px)/15); */
-  /* background-color: rebeccapurple; */
-  /* color: black; */
-  /* padding: 10 0px; */
-  /* flex-direction: column; */
-  /* font-weight: bold; */
-/* } */
-
-/* .detail-link-title { */
-  /* width: 5vw; */
-  /* height: calc((100vh - 100px)/15); */
-  /* background-color: rebeccapurple; */
-  /* color: black; */
-  /* padding: 10px; */
-  /* flex-direction: column; */
-  /* font-weight: bold; */
-/* } */
-
 .travel-lists {
   position: absolute;
   left: 5px;
   height: calc((100vh - 200px)/2);
   width: 45vw;
-  /* background-color: rebeccapurple; */
   color: black;
   flex-direction: column;
   padding: 10px;
@@ -233,12 +191,10 @@ html { height: 100vh; }
   right:  5px; 
   height: calc((100vh - 200px)/2); 
   width: 5vw;
-  /* background-color: rebeccapurple; */
   color: black;
   flex-direction: column;
   padding: 10px;
 }
-
 
 .select-trip-chart {
   width: 50vw;
@@ -247,8 +203,8 @@ html { height: 100vh; }
   padding:10px 0;
   flex-direction: column;
   background-color:#F7DCC3;
-  /* border-top: double 3px #8C031C; */
   border-bottom: double 3px #8C031C;
+
 }
 .select-result-title {
   width: 50vw;
@@ -256,7 +212,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -296,7 +251,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -333,7 +287,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -370,7 +323,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -407,7 +359,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -438,31 +389,27 @@ html { height: 100vh; }
   flex-direction: column;
 }
 
-
-
-.select-trip-chart-left {
+/* .select-trip-chart-left {
   width: calc(50vw/2);
   height: calc((100vh - 100px)/5);
   background-color:#F7DCC3;
   padding: 10px;
+} */
 
-}
-
-.select-trip-chart-right {
+/* .select-trip-chart-right {
   width: calc(50vw/2);
   height: calc((100vh - 100px)/2);
   background-color:#F7DCC3;
   padding: 10px;
   color: black;
   font-size: 10px;
-}
+} */
 
 .select-trip-chart a{
   font-size: 16px;
   color: black;
   text-decoration: none;
 }
-
 
 .main-under{
   display: flex;
@@ -521,7 +468,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -561,7 +507,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -598,7 +543,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -635,7 +579,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -672,7 +615,6 @@ html { height: 100vh; }
   background-color:#F7DCC3;
   color: black;
   padding: 10px;
-  /* flex-direction: column; */
   display: flex;
 }
 
@@ -736,7 +678,6 @@ span{
 .travel-detail{
   margin: 3vh 0;
   text-decoration: underline;
-
 }
 
 .group-name-list{

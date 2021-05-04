@@ -1,14 +1,6 @@
 <div class = main-top>
   <div class="travel-history">
     <a href="#">■参加旅行一覧</a>
-      <%# <div class="select-travel-title"> %>
-        <%# <div class="travel-name-title"> %>
-          <%# <a href="#">旅行名称</a> %>
-        <%# </div> %>
-        <%# <div class="detail-link-title"> %>
-          <%# <a href="#">リンク</a> %>
-        <%# </div> %>
-      <%# </div> %>
     <div class="travel-lists">
       <% current_user.groups.each do |group| %>
         <% group.travels.each do |travel| %>
@@ -43,7 +35,7 @@
           <a href="#">男気金額</a>
         </div>
         <div class="times-title">
-          <a href="#">男気勝利数</a>
+          <a href="#">男気回数</a>
         </div>
       </div>
       <div class="select-trip-result1">
@@ -92,7 +84,7 @@
           <a href="#">男気金額</a>
         </div>
         <div class="times-gr-title">
-          <a href="#">男気勝利数</a>
+          <a href="#">男気回数</a>
         </div>
       </div>
       <div class="select-gr-result1">

@@ -10,7 +10,6 @@ class TravelSelectsController < ApplicationController
     if @travels_id.nil?
       redirect_to new_travel_path
     else
-      # @group_ids = @groups.select(:group_id)
       @travels = Travel.where(group_id: @group_ids)
     end
   end
@@ -25,7 +24,6 @@ class TravelSelectsController < ApplicationController
   end
 
   private
-
   def travel_select_params
     params.require(:travel_select).permit(:travel_id).merge(user_id: current_user.id)
   end

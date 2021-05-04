@@ -6,7 +6,7 @@ RSpec.describe "ジャンケン結果を記録する", type: :system do
     @user2 = FactoryBot.create(:user)
     @user3 = FactoryBot.create(:user)
     @user4 = FactoryBot.create(:user)
-    @group_name = Faker::Company.name
+    @group_name = Faker::Company.name[1..10]
     @travel_name = Gimei.town.kanji
     @money = Faker::Number.number(digits: 4)
     @money2 = Faker::Number.number(digits: 4)
@@ -106,7 +106,7 @@ RSpec.describe "ジャンケン結果を記録する", type: :system do
       # 男気ジャンケンの結果を確認する為、選択した旅行名をクリックする
       click_link '詳細'
       # 登録した金額が表示されることを確認する
-      expect(page).to have_content(@money)
+      expect(page).to have_content(@money.to_s(:delimited))
     end
   end
 
@@ -222,7 +222,7 @@ RSpec.describe "ジャンケン結果を記録する", type: :system do
       # 男気ジャンケンの結果を確認する為、選択した旅行名をクリックする
       click_link '詳細'
       # 登録した金額が表示されることを確認する
-      expect(page).to have_content(@money2)
+      expect(page).to have_content(@money2.to_s(:delimited))
     end
   end
 
@@ -326,7 +326,7 @@ RSpec.describe "ジャンケン結果を記録する", type: :system do
     # 男気ジャンケンの結果を確認する為、選択した旅行名をクリックする
     click_link '詳細'
     # 登録した金額が表示されることを確認する
-    expect(page).to have_no_content(@money)
+    expect(page).to have_no_content(@money.to_s(:delimited))
   end
 end
 
@@ -350,7 +350,7 @@ end
       # ジャンケン結果記録ページに移動する
       visit new_result_path
       # 男気ジャンケン記録ページに存在すべきテキストがないことを確認する
-      expect(page).to have_no_content('【必須】男気がある人を選択')
+      expect(page).to have_no_content('【必須】男気を魅せた人')
       # グループ作成ページに存在するテキストがあることを確認する
       expect(page).to have_content('【必須】グループ')
     end
@@ -383,7 +383,7 @@ end
       # ジャンケン結果記録ページに移動する
       visit new_result_path
       # 男気ジャンケン記録ページに存在すべきテキストがないことを確認する
-      expect(page).to have_no_content('【必須】男気がある人を選択')
+      expect(page).to have_no_content('【必須】男気を魅せた人')
       # 旅行作成ページに存在するテキストがあることを確認する
       expect(page).to have_content('【必須】旅行名')
     end
@@ -438,7 +438,7 @@ end
       # ジャンケン結果記録ページに移動する
       visit new_result_path
       # 男気ジャンケン記録ページに存在すべきテキストがないことを確認する
-      expect(page).to have_no_content('【必須】男気がある人を選択')
+      expect(page).to have_no_content('【必須】男気を魅せた人')
       # 旅行選択ページに存在するテキストがあることを確認する
       expect(page).to have_content('【必須】旅行選択')
     end
@@ -519,7 +519,7 @@ end
       # 記録ページに留まることを確認する
       expect(current_path).to eq(new_result_path)
       # 男気ジャンケン記録ページに存在すべきテキストがあることを確認する
-      expect(page).to have_content('【必須】男気がある人を選択')
+      expect(page).to have_content('【必須】男気を')
       # トップページに存在するログアウトボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログアウト')
     end
@@ -600,7 +600,7 @@ end
       # 記録ページに留まることを確認する
       expect(current_path).to eq(new_result_path)
       # 男気ジャンケン記録ページに存在すべきテキストがあることを確認する
-      expect(page).to have_content('【必須】男気がある人を選択')
+      expect(page).to have_content('【必須】男気を魅せた')
       # トップページに存在するログアウトボタンが表示されていないことを確認する
       expect(page).to have_no_content('■ログアウト')
     end

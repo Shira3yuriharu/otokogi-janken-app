@@ -5,7 +5,7 @@
   <%# <%= render 'devise/shared/error_messages', model: f.object %> 
     <div class='new-group-form__field'>
       <div class='new-group-form__field--left'>
-        <%= f.label :【必須】グループ名, class: 'new-group-form__label'%>
+        <%= f.label :【必須】グループ名（最大10文字）, class: 'new-group-form__label'%>
       </div>
       <div class='new-group-form__field--right'>
         <%= f.text_field :name, autofocus: true, class: 'chat__room_name new-group-form__input', placeholder: 'グループ名を入力してください'%>
