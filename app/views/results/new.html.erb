@@ -2,7 +2,7 @@
  
   <h1>男気ジャンケン 結果記録</h1>
   <div class="travel-name-variable">対象旅行名：<%= @travel_name %></div>
-  <h3 class='attention'>【必須】は必ず入力または選択ください</h3>
+  <h4 class='attention'>【必須】は必ず入力または選択ください</h4>
   <%=form_with model: @result, local: true do |f|%>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
     <%= render 'devise/shared/error_messages', model: f.object %>
