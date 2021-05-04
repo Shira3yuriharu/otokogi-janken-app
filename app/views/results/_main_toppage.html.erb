@@ -1,14 +1,6 @@
 <div class = main-top>
   <div class="travel-history">
     <a href="#">■参加旅行一覧</a>
-      <%# <div class="select-travel-title"> %>
-        <%# <div class="travel-name-title"> %>
-          <%# <a href="#">旅行名称</a> %>
-        <%# </div> %>
-        <%# <div class="detail-link-title"> %>
-          <%# <a href="#">リンク</a> %>
-        <%# </div> %>
-      <%# </div> %>
     <div class="travel-lists">
       <% current_user.groups.each do |group| %>
         <% group.travels.each do |travel| %>

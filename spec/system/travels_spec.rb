@@ -6,7 +6,7 @@ RSpec.describe "男気旅行作成", type: :system do
     @user2 = FactoryBot.create(:user)
     @user3 = FactoryBot.create(:user)
     @user4 = FactoryBot.create(:user)
-    @group_name = Faker::Company.name
+    @group_name = Faker::Company.name[1..10]
     @travel_name = Gimei.town.kanji
   end
 

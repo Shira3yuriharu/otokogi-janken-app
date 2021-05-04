@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   
   def new
     @group = Group.new
-    # @group.users<<current_user
   end
 
   def create
@@ -12,15 +11,11 @@ class GroupsController < ApplicationController
     else
       render :new
     end
-    # binding.pry
-    # group.save
-    
   end
 
-private
-
-def group_params
-  params.require(:group).permit(:name, user_ids: [])
-end
+  private
+  def group_params
+    params.require(:group).permit(:name, user_ids: [])
+  end
 
 end

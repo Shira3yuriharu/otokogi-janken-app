@@ -25,7 +25,6 @@ class TravelsController < ApplicationController
 
   def create
     @travel = Travel.new(travel_params)
-    # binding.pry
     if @travel.save
       redirect_to root_path
     else
@@ -41,11 +40,9 @@ class TravelsController < ApplicationController
     # コメント表示
     @comment = Comment.new
     @comments = @travel.comments.includes(:user)
-    # binding.pry
   end
 
   private
-
   def travel_params
     params.require(:travel).permit(:name, :start_day, :end_day, :group_id)
   end

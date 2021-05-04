@@ -6,7 +6,7 @@ RSpec.describe "ジャンケン結果を記録する旅行選択実施", type: :
     @user2 = FactoryBot.create(:user)
     @user3 = FactoryBot.create(:user)
     @user4 = FactoryBot.create(:user)
-    @group_name = Faker::Company.name
+    @group_name = Faker::Company.name[1..10]
     @travel_name = Gimei.town.kanji
   end
 

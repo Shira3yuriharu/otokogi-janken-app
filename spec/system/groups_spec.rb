@@ -6,7 +6,7 @@ RSpec.describe "男気グループ作成", type: :system do
     @user2 = FactoryBot.create(:user)
     @user3 = FactoryBot.create(:user)
     @user4 = FactoryBot.create(:user)
-    @group_name = Faker::Company.name
+    @group_name = Faker::Company.name[1..10]
   end
   context '男気グループ作成ができるとき'do
     it 'ログインしたユーザーはグループメンバーを本人以外3人選択した場合、男気グループ作成ができる' do

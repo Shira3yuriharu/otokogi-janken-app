@@ -3,8 +3,7 @@
   <h1>男気旅行 新規作成</h1>
   <%=form_with model: @travel, local: true do |f|%>
   <h4 class='attention'>【必須】は必ず入力または選択ください</h4>
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにする。%>
-    <%= render 'devise/shared/error_messages', model: f.object %>
+    <%# <%= render 'devise/shared/error_messages', model: f.object %>
 
     <div class='travel-registration-form__field'>
       <div class='travel-registration-form__field--left'>
@@ -51,5 +50,4 @@
     </div>
 
   <% end %>
-
 </div>
