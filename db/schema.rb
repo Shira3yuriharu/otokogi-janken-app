@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2021_05_05_014207) do
 
   create_table "spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "url", null: false
+    t.text "url", null: false
     t.string "genre", null: false
     t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
