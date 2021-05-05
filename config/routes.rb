@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'spots/index'
+  get 'spots/search'
   devise_for :users
   root to:"results#index"
   resources :users, only: [:edit, :update]
