@@ -1,16 +1,12 @@
-<h1>
-  男気スポット検索結果
-</h1>
+<h1>男気スポット検索結果</h1>
 <%# 検索結果の個数で条件分岐 %>
 <% if @results.length !=0 %>
   <% @results.each do |result| %>
     <td>
     <br>
     <li>
-      <%= result.name %>
-      <%= result.url %>
-      <%= result.genre %>
-      <%= result.category.name %>
+        <%= link_to result.name,result.url %>
+        （<%= result.genre %>）
     </li>
   <% end %>
 <% else %>
