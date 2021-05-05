@@ -1,2 +1,20 @@
-<h1>Spots#search</h1>
-<p>Find me in app/views/spots/search.html.erb</p>
+<h1>
+  男気スポット検索結果
+</h1>
+<%# 検索結果の個数で条件分岐 %>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+    <td>
+    <br>
+    <li>
+      <%= result.name %>
+      <%= result.url %>
+      <%= result.genre %>
+      <%= result.category.name %>
+    </li>
+  <% end %>
+<% else %>
+  該当する情報はありません
+<% end %>
+<br>
+<%= link_to 'トップページへ戻る', root_path %>

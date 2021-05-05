@@ -1,9 +1,10 @@
 class SpotsController < ApplicationController
 
-  before_action :search_product, only: [:index, :search]
+  before_action :search_spot, only: [:index, :search]
 
   def index
     @spots = Spot.all
+    set_category_column
   end
 
   def search
@@ -13,6 +14,10 @@ class SpotsController < ApplicationController
   private
   def search_spot
     @p = Spot.ransack(params[:q])
+  end
+
+  def set_category_column
+    @category_name = Category.select("name").distinct
   end
 
 end
