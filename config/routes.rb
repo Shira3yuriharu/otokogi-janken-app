@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :travels do
     resources :comments, only: :create
   end
+  resources :spots, only: [:index]
 
   get 'results/checked/:id', to: 'results#checked'
   get 'results/group/:id', to: 'results#checked2'
