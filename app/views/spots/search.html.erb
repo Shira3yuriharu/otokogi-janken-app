@@ -1,0 +1,21 @@
+<h1>男気スポット検索結果</h1>
+<%# 検索結果の個数で条件分岐 %>
+<div class='search-result'>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+    <td>
+    <br>
+    <li>
+        <%= link_to result.name,result.url %>
+        【<%= result.category.name %>】
+        （<%= result.genre %>）
+    </li>
+  <% end %>
+<% else %>
+  該当する情報はありません
+<% end %>
+</div>
+
+<div class='top-page-link'>
+  <%= link_to 'トップページへ戻る', root_path %>
+</div>

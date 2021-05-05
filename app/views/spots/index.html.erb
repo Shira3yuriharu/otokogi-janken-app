@@ -1,0 +1,12 @@
+<h1>男気スポット検索</h1>
+  <%= search_form_for @p, url: spots_search_path do |f| %>
+    <div class='search-select'>
+      <%= f.label :category_name_eq, '旅行してみたい地域' %>
+    </div>
+    <div class='search-form'>
+      <%= f.collection_select :category_name_eq, @category_name, :name, :name, include_blank: '指定なし', autofocus: true %>
+    </div>
+  <div class='search-button'>
+    <%= f.submit '検索' %>
+  </div>
+  <% end %>

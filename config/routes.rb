@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'spots/index'
+  get 'spots/search'
   devise_for :users
   root to:"results#index"
   resources :users, only: [:edit, :update]
@@ -9,7 +11,10 @@ Rails.application.routes.draw do
   resources :travels do
     resources :comments, only: :create
   end
+  resources :spots, only: [:index]
 
   get 'results/checked/:id', to: 'results#checked'
   get 'results/group/:id', to: 'results#checked2'
+
+  get 'spots/search'
 end

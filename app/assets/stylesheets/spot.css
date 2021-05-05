@@ -1,0 +1,31 @@
+.search-select{
+  font-size: auto;
+  margin-top: 10vh;
+  text-decoration: none;
+  text-align: left;
+  margin-left:25%;
+}
+.search-form{
+  font-size: auto;
+  margin: auto;
+  text-decoration: none;
+  text-align: center;
+}
+.search-button{
+  font-size: auto;
+  margin: auto;
+  text-decoration: none;
+  text-align: center;
+}
+
+.search-result{
+  font-size: auto;
+  margin: 5vh 0;
+  margin-left: 15vw;
+}
+
+.top-page-link{
+  font-size: auto;
+  text-align: center;
+  margin-top: 5vh 0;
+}

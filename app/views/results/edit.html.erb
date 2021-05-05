@@ -9,7 +9,7 @@
         <%= f.label :【必須】男気を魅せた人, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
-        <%= f.collection_select(:nickname, User.where(id: @user_ids).select('nickname'), :nickname, :nickname, {include_blank: "----"}) %>
+        <%= f.collection_select(:nickname, User.where(id: @user_ids).select('nickname'), :nickname, :nickname, {include_blank: "----"},{autofocus: true}) %>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :【任意】品目, class: 'result-input-form__label'%>
+        <%= f.label :品目, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.collection_select(:item_category_id, ItemCategory.all, :id, :name ) %>
@@ -33,7 +33,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :【任意】備考, class: 'result-input-form__label'%>
+        <%= f.label :備考, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.text_field :note,size: 30 %>
@@ -42,7 +42,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :【任意】写真（選択しない場合、既存の画像が再登録されます）, class: 'result-input-form__label'%>
+        <%= f.label :写真（選択しない場合、既存の画像が再登録されます）, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.file_field :image %>
