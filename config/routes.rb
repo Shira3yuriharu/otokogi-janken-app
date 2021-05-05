@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get 'results/checked/:id', to: 'results#checked'
   get 'results/group/:id', to: 'results#checked2'
+
+  get 'spots/search'
 end
