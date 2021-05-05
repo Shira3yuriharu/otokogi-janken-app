@@ -26,7 +26,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :【任意】品目, class: 'result-input-form__label'%>
+        <%= f.label :品目, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.collection_select(:item_category_id, ItemCategory.all, :id, :name ) %>
@@ -35,7 +35,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :【任意】備考, class: 'result-input-form__label'%>
+        <%= f.label :備考, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.text_field :note,size: 30 %>
@@ -44,7 +44,7 @@
 
     <div class='result-input-form__field'>
       <div class='result-input-form__field--left'>
-        <%= f.label :【任意】写真, class: 'result-input-form__label'%>
+        <%= f.label :写真, class: 'result-input-form__label'%>
       </div>
       <div class='result-input-form__field--right'>
         <%= f.file_field :image %>
