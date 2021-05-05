@@ -68,9 +68,26 @@
 ## commentsテーブル
 | Column          | Type     | Options      |
 | --------------  | ------   | ----------   |
-| text            | text   |              |
+| text            | text     |              |
 | user            | reference| null: false  |
 | travel          | reference| null: false  |
 ### Association
 - belongs_to :user
 - belongs_to :travel
+
+## categoriesテーブル
+| Column          | Type     | Options      |
+| --------------  | ------   | ----------   |
+| name            | string   | null: false  |
+### Association
+- has_many :spots
+
+## spotsテーブル
+| Column          | Type     | Options      |
+| --------------  | ------   | ----------   |
+| name            | string   | null: false  |
+| url             | string   | null: false  |
+| genre           | string   | null: false  |
+| category        | reference| null: false  |
+### Association
+- belongs_to :category
