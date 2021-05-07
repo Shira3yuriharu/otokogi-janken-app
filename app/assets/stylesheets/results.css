@@ -111,7 +111,7 @@ html { height: 100vh; }
 }
 
 .user-management-variable{
-  font-size: 1vw;
+  font-size: 75%;
   margin: 3px 0;
   font-weight: bold;
   text-decoration: none;
@@ -125,11 +125,11 @@ html { height: 100vh; }
 }
 
 .user-edit{
-  font-size: 12px;
+  font-size: 75%;
 }
 
 .user-logout{
-  font-size: 12px;
+  font-size: 75%;
 }
 
 .user-login{
