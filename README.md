@@ -97,7 +97,7 @@ www/****<br>
 <img src=https://gyazo.com/ae4082eb823df32682d252410ab1cc25 width="320px"><br>
 
   * 統合テスト(ユーザー登録〜男気ジャンケン結果登録〜男気ジャンケン結果表示〜男気ジャンケン結果削除)<br>
-
+<img src=https://gyazo.com/ae4082eb823df32682d252410ab1cc25 width="320px"><br>
 # テーブル設計
 
 ## usersテーブル
