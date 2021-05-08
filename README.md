@@ -2,6 +2,13 @@
 ### 男気ジャンケン記録アプリ
 <img src=https://user-images.githubusercontent.com/76254421/117452089-531bc100-af7e-11eb-90ec-075673d7311d.png width="320px">
 
+# 本番環境
+- デプロイ先<br>
+www/****<br>
+- テストアカウント<br>
+・メールアドレス：test1@gmail.com<br>
+・パスワード：test1test<br>
+
 # はじめに（制作背景）
 友人との旅行で”男気ジャンケン”をしたことはありますか？<br>
 1番男気がある人をジャンケンで決めるゲームです。<br>
@@ -63,9 +70,33 @@
 ![demo](https://gyazo.com/3c58886d78f75525e74c1feed4a2182b/raw)<br>
 - ジャンケン結果は非同期処理で表示されます。（機能7）<br>
 ![demo](https://gyazo.com/92bea0194a7d7d5681ea8f59c279f112/raw)<br>
-- 紹介する54Spotは全て関連WebサイトのURLを紐付けています。（機能）<br>
+- 紹介する54Spotは全て関連WebサイトのURLを紐付けています。（機能6）<br>
 ![demo](https://gyazo.com/325aff80ec4494844340693148c9f10c/raw)<br>
 
+# 使用技術(verは後ほど調査)<br>
+* Ruby 2.5.7<br>
+* Ruby on Rails 5.2.4<br>
+* MySQL 5.7<br>
+* JavaScript<br>
+* HTML<br>
+* CSS<br>
+* AWS(S3)<br>
+* GitHubDesktop<br>
+* Caspisrano3<br>
+* VScode<br>
+
+# 機能一覧<br>
+* ユーザー登録、ログイン(devise)<br>
+* ジャンケン結果登録機能(ActiveStrage)<br>
+* ジャンケン結果表示機能(Ajax)<br>
+* 検索機能(ransack)<br>
+
+# テスト<br>
+* RSpec<br>
+  * 単体テスト(ユーザー登録、ログイン)<br>
+<img src=https://gyazo.com/ae4082eb823df32682d252410ab1cc25 width="320px"><br>
+
+  * 統合テスト(ユーザー登録〜男気ジャンケン結果登録〜男気ジャンケン結果表示〜男気ジャンケン結果削除)<br>
 
 # テーブル設計
 
