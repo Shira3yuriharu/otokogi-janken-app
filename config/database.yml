@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: otokogi_janken_app_production
-  username: otokogi_janken_app
-  password: <%= ENV['OTOKOGI_JANKEN_APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
