@@ -684,3 +684,9 @@ span{
 .group-name-list{
   margin: 3vh 0;
 }
+
+.top-page-link-show{
+  font-size: auto;
+  text-align: center;
+  margin: 5vh;
+}
