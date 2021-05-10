@@ -4,10 +4,10 @@
 
 # 本番環境
 - デプロイ先<br>
-www/****<br>
+35.74.57.196<br>
 - テストアカウント<br>
-・メールアドレス：test1@gmail.com<br>
-・パスワード：test1test<br>
+・メールアドレス：test2@gmail.com<br>
+・パスワード：test2test<br>
 
 # はじめに（制作背景）
 友人との旅行で”男気ジャンケン”をしたことはありますか？<br>
@@ -81,8 +81,9 @@ www/****<br>
 * HTML<br>
 * CSS<br>
 * AWS(S3)<br>
-* GitHubDesktop<br>
+* AWS(EC2)<br>
 * Caspisrano3<br>
+* GitHubDesktop<br>
 * VScode<br>
 
 # 機能一覧<br>
