@@ -82,7 +82,7 @@
 * CSS<br>
 * AWS(S3)<br>
 * AWS(EC2)<br>
-* Caspisrano3<br>
+* Capistrano<br>
 * GitHubDesktop<br>
 * VScode<br>
 
