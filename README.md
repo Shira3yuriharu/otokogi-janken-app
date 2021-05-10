@@ -74,9 +74,9 @@
 ![demo](https://gyazo.com/325aff80ec4494844340693148c9f10c/raw)<br>
 
 # 使用技術(verは後ほど調査)<br>
-* Ruby 2.5.7<br>
-* Ruby on Rails 5.2.4<br>
-* MySQL 5.7<br>
+* Ruby 2.6.5<br>
+* Ruby on Rails 6.0.3.6<br>
+* MySQL 5.6.50<br>
 * JavaScript<br>
 * HTML<br>
 * CSS<br>
