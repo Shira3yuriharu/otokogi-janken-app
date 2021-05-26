@@ -659,9 +659,16 @@
 
 .result-input-form{
   text-align: center;
-  width: 60%;
-  margin-left:auto;
-  margin-right:auto;
+  /* width: 60%; */
+  /* margin-left:auto; */
+  /* margin-right:auto; */
+  margin: 2%;
+  padding: 1%;
+  padding: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 span{
@@ -1351,15 +1358,18 @@ span{
   
   .result-input-form__field--left{
     text-align: left;
-    margin-left:25%;
+    margin-left:0!important;
     margin-top:1vh;
   }
   
   .result-input-form{
-    text-align: center;
-    width: 60%;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 3%;
+    padding: 3%;
+    padding: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
   }
   
   span{
@@ -1367,7 +1377,7 @@ span{
   }
   
   .travel-name-variable{
-    font-size: 18px;
+    font-size: 15px;
     margin: 1%;
     text-decoration: none;
   }
