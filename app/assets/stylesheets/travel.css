@@ -1,3 +1,14 @@
+.travel-registration-form {
+  margin: 2%;
+  padding: 3%;
+  padding: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
 .detail-page-title{
   color:black;
 }
@@ -97,4 +108,125 @@ td,th {
   text-align: center;
   padding: 1vw;
   white-space: nowrap ;
+}
+
+
+@media (max-width: 599px) {
+  .travel-registration-form {
+    margin: 2%;
+    padding: 3%;
+    padding: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  
+  .detail-page-title{
+    color:black;
+  }
+  
+  .detail-page-select-travel{
+    color:black;
+    font-size: large;
+    text-align: center;
+    margin: auto;
+    font-size: 3.5vw;
+    margin-top: 2vh;
+  }
+  
+  .detail-page-travel-period{
+    color:black;
+    font-size: large;
+  }
+  
+  .travel-result-table{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .result-image{
+    width: 15vw;
+    height: auto;
+  }
+  
+  .container{
+    width:100vw;
+    margin: auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  form input,
+  form textarea {
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+  }
+  
+  form input[type="submit"] {
+    background-color: #57C3E9;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    margin: 5vh 0;
+  }
+  
+  .comments {
+    padding: 0 20px;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .travel-registration-form__field{
+    width: 100%;
+    padding: 0;
+  }
+  
+  .travel-registration-form__field--left{
+    text-align: left;
+    margin-top: 2vh;
+    padding: 0;
+  }
+  
+  .travel-registration-form__field--right{
+    text-align: center;
+  }
+  
+  .travel-registration-form__field-date{
+    padding: 0;
+    text-align: center;
+  }
+  
+  .travel-registration-form__field-date--left{
+    width: 100%;
+    text-align: left;
+    margin-top: 2vh;
+  }
+  
+  .travel-registration-form__field-date--right{
+    text-align: center;
+    display: flex;
+    width: 100%;
+  }
+  
+  thead,
+  tfoot{
+    background-color:#F7DCC3;
+  }
+  tbody{
+    background-color: white;
+  }
+  
+  td,th {
+    text-align: center;
+    padding: 0!important;
+    white-space: normal!important ;
+    font-size: 1vw;
+  }
 }
