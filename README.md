@@ -73,7 +73,8 @@
 - 紹介する54Spotは全て関連WebサイトのURLを紐付けています。（機能6）<br>
 ![demo](https://gyazo.com/325aff80ec4494844340693148c9f10c/raw)<br>
 - スマホ向けにレスポンシブ対応を行っています（全般）<br>
-![demo](https://gyazo.com/a8192352bd7ffd7893c04d102f8daab0)<br>
+<img src=https://user-images.githubusercontent.com/76254421/119759741-ba74c300-bee3-11eb-9f61-5138a7e03dd8.jpeg width="320px"><br>
+
 
 
 # 使用技術<br>
