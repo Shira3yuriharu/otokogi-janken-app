@@ -3,7 +3,7 @@
 <img src=https://user-images.githubusercontent.com/76254421/117452089-531bc100-af7e-11eb-90ec-075673d7311d.png width="320px">
 
 # 本番環境
-- デプロイ先(下記をコピペして、アクセス下さい)<br>
+- デプロイ先(下記をコピペして、是非アクセス下さい！)<br>
 35.74.57.196<br>
 - テストアカウント<br>
 ・メールアドレス：test2@gmail.com<br>
