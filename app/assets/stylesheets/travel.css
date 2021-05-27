@@ -132,6 +132,8 @@ td,th {
     font-size: large;
     text-align: center;
     margin: auto;
+    font-size: 3.5vw;
+    margin-top: 2vh;
   }
   
   .detail-page-travel-period{
@@ -150,6 +152,7 @@ td,th {
   }
   
   .container{
+    width:100vw;
     margin: auto 0;
     padding: 20px;
     box-sizing: border-box;
@@ -222,7 +225,8 @@ td,th {
   
   td,th {
     text-align: center;
-    padding: 1vw;
-    white-space: nowrap ;
+    padding: 0!important;
+    white-space: normal!important ;
+    font-size: 1vw;
   }
 }
