@@ -803,7 +803,7 @@ span{
     font-size: auto;
   }
   .top-page-index-complement{
-    font-size: 1vmin;
+    font-size: 2vmin;
   }
   
   .user-management {
@@ -892,7 +892,7 @@ span{
   .travel-history a{
     color: black;
     text-decoration: none;
-    font-size: 5px;
+    font-size: 30%;
   }
   
   .travel-lists {
@@ -1112,7 +1112,7 @@ span{
   }
   
   .select-trip-chart a{
-    font-size: 5px;
+    font-size: 30%;
     color: black;
     text-decoration: none;
   }
@@ -1134,7 +1134,7 @@ span{
     font-size: auto;
     color: black;
     text-decoration: none;
-    font-size: 5px;
+    font-size: 30%;
   }
   
   .group-lists {
@@ -1150,7 +1150,7 @@ span{
   }
   
   .group-name-list {
-    font-size: 16px;
+    font-size: 30%;
     color: black;
     text-decoration: none;
   }
@@ -1164,7 +1164,7 @@ span{
   }
   
   .total-trip-chart a{
-    font-size: 5px;
+    font-size: 30%;
     color: black;
     text-decoration: none;
   }
