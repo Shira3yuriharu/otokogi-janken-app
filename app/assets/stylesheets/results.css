@@ -724,7 +724,7 @@ span{
     border-top: double 3px #8C031C;
     border-bottom: none!important;
     border-right: none!important;
-    font-size: 1vw;
+    /* font-size: 1vw; */
     font-weight: bold;
   }
 
@@ -903,7 +903,7 @@ span{
     color: black;
     flex-direction: column;
     padding: 0!important;
-    font-size: 5px;
+    /* font-size: 5px; */
   }
   
   .detail-lists {
