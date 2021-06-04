@@ -914,7 +914,7 @@ span{
     color: black;
     flex-direction: column;
     padding: 0!important;
-    font-size: 5px;
+    /* font-size: 5px; */
   }
   
   .select-trip-chart {
